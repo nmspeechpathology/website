@@ -1,0 +1,35 @@
+---
+const { title = "Home" } = Astro.props;
+const siteName = "NMSP";
+const fullTitle = title ? `${title} | ${siteName}` : "NMSP";
+import Header from '../components/Header.astro';
+import '../styles/global.css';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+        <title>{fullTitle}</title>
+	</head>
+	<body>
+		<div class="top-box">
+			<div class="circle-size-lg circle"/>
+			<h1>Nicole McFarlane</h1>
+			<h2>SPEECH PATHOLOGY</h2>
+		</div>
+		<Header />
+        <main>
+		    <slot />
+        </main>
+	</body>
+    <footer>
+        <div class="footer-box">
+            <div class="circle-size-sm color-match-1 circle"/>
+            <h1 class="footer-h1">Nicole McFarlane</h1>
+            <h2 class="footer-h2">SPEECH PATHOLOGY</h2>
+        </div>
+    </footer>
+</html>

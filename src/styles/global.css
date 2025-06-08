@@ -1,0 +1,241 @@
+:root {
+  --color-palette-1: rgba(229,219,202,1);
+  --color-palette-1-half: rgba(229,219,202,0.95);
+  --color-palette-2: rgba(95,31,26,1);
+  --color-palette-3: rgba(152,177,174,1);
+}
+
+html {
+    background-color: #f1f5f9;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    line-height: 1.5;
+    color: var(--color-palette-2);
+    //background-color: var(--color-palette-1);
+}
+
+footer {
+    color: var(--color-palette-1);
+    background-color: var(--color-palette-2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-size: calc(5vw + 10px);
+    text-align: center;
+}
+
+h2 {
+    margin: 1rem 0;
+    font-size: calc(2vw + 10px);
+    text-align: center;
+}
+
+p {
+    margin: 0 0 -0.2rem 0;
+    font-size: calc(0.5vw + 12px);
+    text-align: left;
+}
+
+/* class styles */
+
+.top-box {
+    background-color: var(--color-palette-1);
+    padding: 30px;
+}
+
+.middle-box {
+    background-color: var(--color-palette-3);
+    padding: 30px;
+}
+
+.bottom-box {
+    background-color: var(--color-palette-1);
+    padding: 30px;
+}
+
+
+.circle {
+    border-radius: 50%;
+    background-color: var(--color-palette-2);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.circle-size-lg {
+    width: calc(8vw + 30px);
+    height: calc(8vw + 30px);
+}
+
+.circle-size-sm {
+    width: calc(4vw + 30px);
+    height: calc(4vw + 30px);
+}
+
+.color-match-1 {
+    color: var(--color-palette-2);
+    background-color: var(--color-palette-1);
+}
+
+.color-match-2 {
+    color: var(--color-palette-1);
+    background-color: var(--color-palette-2);
+}
+
+.footer-box {
+    padding: 4vh 0 0 0;
+}
+
+.footer-h1 {
+    font-size: calc(2vw + 10px);
+}
+
+.footer-h2 {
+    font-size: calc(1vw + 10px);
+}
+
+.container {
+    position: relative;
+    height: 40vh;
+}
+
+.box {
+    position: absolute;
+    padding: 30px;
+}
+
+.left-innerbox {
+    width: 100%;
+    max-width: 30vw;
+    margin: 15vh 0vw 0vh 10vw;
+    z-index: 2;
+}
+
+.right-innerbox {
+    width: 100%;
+    max-width: 30vw;
+    margin: 5vh 15vw 0vh 35vw;
+    z-index: 1;
+    
+    aspect-ratio: 16 / 9; /* or 1 / 1 for square */
+    overflow: hidden;
+}
+
+/* nav styles */
+
+.nav-links {
+    /*
+    top: 5rem;
+    left: 48px;
+    background-color:var(--color-palette-3);
+    display: flex;
+    margin: 0;
+    */
+    display: flex;
+    background-color: var(--color-palette-1);
+}
+
+.nav-links a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 5vw 0 5vw;
+    text-decoration: none;
+    font-size: calc(1.5vw + 10px);
+    font-weight: bold;
+    text-transform: uppercase;
+    flex: 1;
+    color: var(--color-palette-2);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color:var(--color-palette-3);
+    color: var(--color-palette-1) !important;
+}
+
+.active {
+    font-weight: bold;
+    color: var(--color-palette-1) !important;
+    background-color: var(--color-palette-3) !important;
+    //border-top: 2px solid currentColor;
+    
+}
+
+.expanded {
+    display: unset;
+}
+
+
+@media screen and (max-width: 1400px) {
+    body {
+        width: 100%;
+        max-width: 100vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    .left-innerbox {
+        max-width: 40vw;
+    }
+
+    .right-innerbox {
+        background-color: var(--color-palette-2);
+        max-width: 45vw;
+        margin: 5vh 15vw 0vh 40vw;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .left-innerbox {
+        max-width: 50vw;
+    }
+    .right-innerbox {
+        max-width: 50vw;
+        margin: 10vh 15vw 0vh 40vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .left-innerbox {
+        max-width: 70vw;
+        margin: 12vh 0vw 0vh 0vw;
+    }
+    .right-innerbox {
+        max-width: 75vw;
+        height: 35vh;
+        margin: 5vh 15vw 0vh 10vw;
+        z-index: 0;
+    }
+
+}
+
+/*
+@media screen and (min-width: 636px) {
+  .nav-links {
+        //margin-left: 5em;
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+  }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 15px 20px;
+        color: var(--color-palette-2);
+    }
+
+}*/
