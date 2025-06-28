@@ -4,6 +4,8 @@ const siteName = "NMSP";
 const fullTitle = title ? `${title} | ${siteName}` : "NMSP";
 import Header from '../components/Header.astro';
 import '../styles/global.css';
+import MyLogo from '../assets/logo.svg?raw';
+import MyDarkLogo from '../assets/dark-logo.svg?raw';
 ---
 
 <html lang="en">
@@ -16,7 +18,9 @@ import '../styles/global.css';
 	</head>
 	<body>
 		<div class="top-box">
-			<div class="circle-size-lg circle"/>
+			<div class="logo-size-lg logo">
+				<Fragment set:html={MyLogo} />
+			</div>
 			<h1>Nicole McFarlane</h1>
 			<h2>SPEECH PATHOLOGY</h2>
 		</div>
@@ -27,7 +31,9 @@ import '../styles/global.css';
 	</body>
     <footer>
         <div class="footer-box">
-            <div class="circle-size-sm color-match-1 circle"/>
+            <div class="logo-size-sm color-match-1 logo">
+				<Fragment set:html={MyDarkLogo} />
+			</div>
             <h1 class="footer-h1">Nicole McFarlane</h1>
             <h2 class="footer-h2">SPEECH PATHOLOGY</h2>
         </div>

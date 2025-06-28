@@ -1,29 +1,48 @@
 :root {
-  --color-palette-1: rgba(229,219,202,1);
+  --color-palette-0: rgba(140,164,92,0.5);
+  --color-palette-1: rgba(251,235,227,1);
   --color-palette-1-half: rgba(229,219,202,0.95);
-  --color-palette-2: rgba(95,31,26,1);
-  --color-palette-3: rgba(152,177,174,1);
+  --color-palette-2: rgba(22,45,21,1);
+  --color-palette-3: rgba(140,164,92,1);
+  --color-palette-4: rgba(250,204,126,1);
+}
+
+@font-face {
+    font-family: "Texgyrebonum";
+    src: url("/fonts/texgyrebonum-bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 html {
     background-color: #f1f5f9;
-    font-family: sans-serif;
+    font-family: 'Texgyrebonum';
 }
 
 body {
+    font-family: 'Montserrat';
     margin: 0 auto;
     width: 100%;
-    max-width: 80vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    max-width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     line-height: 1.5;
     color: var(--color-palette-2);
-    //background-color: var(--color-palette-1);
 }
 
 footer {
-    color: var(--color-palette-1);
-    background-color: var(--color-palette-2);
+    background-color: var(--color-palette-4);
+    color: var(--color-palette-2);
 }
 
 * {
@@ -31,14 +50,15 @@ footer {
 }
 
 h1 {
+    font-family: 'Texgyrebonum';
     margin: 1rem 0;
-    font-size: calc(5vw + 10px);
+    font-size: calc(3vw + 10px);
     text-align: center;
 }
 
 h2 {
     margin: 1rem 0;
-    font-size: calc(2vw + 10px);
+    font-size: calc(1.4vw + 10px);
     text-align: center;
 }
 
@@ -48,7 +68,21 @@ p {
     text-align: left;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
 /* class styles */
+
+.svg-bg-1 {
+    background-image: url("../assets/vector_assets/Website Elements-12.svg");
+    aspect-ratio: 1087 / 645;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .top-box {
     background-color: var(--color-palette-1);
@@ -57,7 +91,7 @@ p {
 
 .middle-box {
     background-color: var(--color-palette-3);
-    padding: 30px;
+    height: 60vh;
 }
 
 .bottom-box {
@@ -65,33 +99,36 @@ p {
     padding: 30px;
 }
 
-
-.circle {
+.logo {
     border-radius: 50%;
-    background-color: var(--color-palette-2);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-.circle-size-lg {
+.logo-size-lg {
     width: calc(8vw + 30px);
     height: calc(8vw + 30px);
 }
 
-.circle-size-sm {
+.logo-size-sm {
     width: calc(4vw + 30px);
     height: calc(4vw + 30px);
 }
 
 .color-match-1 {
-    color: var(--color-palette-2);
-    background-color: var(--color-palette-1);
+    /*color: var(--color-palette-2);
+    background-color: var(--color-palette-4);*/
 }
 
 .color-match-2 {
-    color: var(--color-palette-1);
-    background-color: var(--color-palette-2);
+    /*color: var(--color-palette-1);
+    background-color: var(--color-palette-2);*/
+}
+
+.color-match-3 {
+    color: var(--color-palette-2);
+    background-color: var(--color-palette-1);
 }
 
 .footer-box {
@@ -108,27 +145,33 @@ p {
 
 .container {
     position: relative;
-    height: 40vh;
+    height: auto;
+    min-height: 100% !important;
+    /*position: relative;
+    height: 100%;*/
 }
 
 .box {
     position: absolute;
-    padding: 30px;
+}
+
+.innerbox {
+    width: 60%;
+    margin: 25% 0% 0% 15%;
 }
 
 .left-innerbox {
     width: 100%;
-    max-width: 30vw;
-    margin: 15vh 0vw 0vh 10vw;
-    z-index: 2;
+    max-width: 23vw;
+    margin-left: 2vw;
+    z-index: 1;
 }
 
 .right-innerbox {
     width: 100%;
-    max-width: 30vw;
-    margin: 5vh 15vw 0vh 35vw;
-    z-index: 1;
-    
+    max-width: 800px;
+    margin-left: 18vw;
+    z-index: 2;
     aspect-ratio: 16 / 9; /* or 1 / 1 for square */
     overflow: hidden;
 }
@@ -136,13 +179,11 @@ p {
 /* nav styles */
 
 .nav-links {
-    /*
-    top: 5rem;
+    /* top: 5rem;
     left: 48px;
     background-color:var(--color-palette-3);
     display: flex;
-    margin: 0;
-    */
+    margin: 0; */
     display: flex;
     background-color: var(--color-palette-1);
 }
@@ -150,7 +191,8 @@ p {
 .nav-links a {
     display: block;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
+    border-radius: 40px 40px 0px 0px;
     margin: 0 5vw 0 5vw;
     text-decoration: none;
     font-size: calc(1.5vw + 10px);
@@ -160,19 +202,19 @@ p {
     color: var(--color-palette-2);
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color:var(--color-palette-3);
-    color: var(--color-palette-1) !important;
-}
-
 .active {
     font-weight: bold;
     color: var(--color-palette-1) !important;
     background-color: var(--color-palette-3) !important;
-    //border-top: 2px solid currentColor;
-    
 }
+
+.nav-links a:hover,
+.nav-links a:focus {
+    background-color:var(--color-palette-2);
+    color: var(--color-palette-1);
+}
+
+
 
 .expanded {
     display: unset;
@@ -192,50 +234,40 @@ p {
     }
 
     .right-innerbox {
-        background-color: var(--color-palette-2);
         max-width: 45vw;
         margin: 5vh 15vw 0vh 40vw;
     }
 }
 
 @media screen and (max-width: 1025px) {
+    .middle-box {
+        height: 45vh;
+    }
     .left-innerbox {
-        max-width: 50vw;
+        max-width: 40vw;
+        max-height: 40vw;
     }
     .right-innerbox {
-        max-width: 50vw;
-        margin: 10vh 15vw 0vh 40vw;
+        max-width: 70vw;
+        margin-left: 30vw;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .middle-box {
+        height: 30vh;
+    }
     .left-innerbox {
-        max-width: 70vw;
-        margin: 12vh 0vw 0vh 0vw;
+        max-width: 30vw;
+        max-height: 30vw;
     }
     .right-innerbox {
-        max-width: 75vw;
-        height: 35vh;
-        margin: 5vh 15vw 0vh 10vw;
-        z-index: 0;
+        width: 100%;
+        max-width: 84vw;
+        margin-left: 8vw;
+        z-index: 2;
+        aspect-ratio: 16 / 9; /* or 1 / 1 for square */
+        overflow: hidden;
     }
 
 }
-
-/*
-@media screen and (min-width: 636px) {
-  .nav-links {
-        //margin-left: 5em;
-        display: block;
-        position: static;
-        width: auto;
-        background: none;
-  }
-
-    .nav-links a {
-        display: inline-block;
-        padding: 15px 20px;
-        color: var(--color-palette-2);
-    }
-
-}*/

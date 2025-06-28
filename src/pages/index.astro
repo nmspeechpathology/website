@@ -1,13 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import myImage from '/src/assets/png_assets/Website Elements-06.png';
 ---
 <BaseLayout title="Home">
+
 	<div class="middle-box">
 		<div class="container">
-			<div class="color-match-1 box left-innerbox">
-				<p class="paragraph">I bring compassionate, tailored speech, language, and swallowing support directly, helping you communicate and enjoy eating with confidence.</p>
+			<div class="svg-bg-1 box left-innerbox">
+				<p class="paragraph innerbox">I bring compassionate, tailored speech, language, and swallowing support directly, helping you communicate and enjoy eating with confidence.</p>
 			</div>
-			<div class="color-match-2 box right-innerbox">&lt;Image&gt;</div>
+			<div class="color-match-2 box right-innerbox svg-1"><img src="src/assets/png_assets/Website Elements-06.png#svgView(preserveAspectRatio(none))" /></div>
+			<!-- <Image src={myImage} alt="Corporate Memphis Image Art"/> -->
+			<!-- <img src="myimage.svg#svgView(preserveAspectRatio(none))" /> -->
 		</div>
 	</div>
 	<div class="bottom-box">
