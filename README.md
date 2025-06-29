@@ -79,3 +79,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     | `<img src={logo.src} alt="Logo from public/" width={100} height={50} />`
 
 ## Importing personalised fonts and compiling / rendering them cleanly.
+
+# https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats
+# https://docs.astro.build/en/guides/markdown-content/

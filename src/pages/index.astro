@@ -2,20 +2,31 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import myImage from '/src/assets/png_assets/Website Elements-06.png';
+import * as aboutMe from '../texts/about-me.md';
+const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 ---
 <BaseLayout title="Home">
 
 	<div class="middle-box">
 		<div class="container">
-			<div class="svg-bg-1 box left-innerbox">
-				<p class="paragraph innerbox">I bring compassionate, tailored speech, language, and swallowing support directly, helping you communicate and enjoy eating with confidence.</p>
+			<div class="svg-bg-1 box infront left-innerbox">
+				<p class="paragraph behind innerbox"><b>I provide <br>compassionate, <br>tailored support in speech, language, and <br>swallowing - helping <br>you communicate <br>more clearly and <br>enjoy mealtimes with <br>confidence.</b></p>
 			</div>
-			<div class="color-match-2 box right-innerbox svg-1"><img src="src/assets/png_assets/Website Elements-06.png#svgView(preserveAspectRatio(none))" /></div>
+			<div class="box behind right-innerbox svg-1 innerbox-overlap">
+				<img src="src/assets/png_assets/Website Elements-06.png#svgView(preserveAspectRatio(none))" />
+			</div>
 			<!-- <Image src={myImage} alt="Corporate Memphis Image Art"/> -->
 			<!-- <img src="myimage.svg#svgView(preserveAspectRatio(none))" /> -->
 		</div>
 	</div>
 	<div class="bottom-box">
-		<h2>HII</h2>
+		<div class="box behind left-innerbox-bottom">
+			<img class="border-radius" src="src/assets/portrait_photo.jpg" />
+		</div>
+		<div class="box infont right-innerbox-bottom">
+			<h2>{aboutMe.frontmatter.title}</h2>
+			<p>{aboutMe.frontmatter.first_paragraph}</p>
+			<p>{aboutMe.frontmatter.second_paragraph}</p>
+		</div>
 	</div>
 </BaseLayout>

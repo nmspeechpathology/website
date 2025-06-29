@@ -25,7 +25,7 @@
 }
 
 html {
-    background-color: #f1f5f9;
+    background-color: white;
     font-family: 'Texgyrebonum';
 }
 
@@ -33,9 +33,7 @@ body {
     font-family: 'Montserrat';
     margin: 0 auto;
     width: 100%;
-    max-width: 70vw;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    max-width: 1500px;
     line-height: 1.5;
     color: var(--color-palette-2);
 }
@@ -52,7 +50,7 @@ footer {
 h1 {
     font-family: 'Texgyrebonum';
     margin: 1rem 0;
-    font-size: calc(3vw + 10px);
+    font-size: calc(2vw + 20px);
     text-align: center;
 }
 
@@ -63,8 +61,6 @@ h2 {
 }
 
 p {
-    margin: 0 0 -0.2rem 0;
-    font-size: calc(0.5vw + 12px);
     text-align: left;
 }
 
@@ -74,6 +70,13 @@ img {
 }
 
 /* class styles */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .svg-bg-1 {
     background-image: url("../assets/vector_assets/Website Elements-12.svg");
@@ -91,10 +94,11 @@ img {
 
 .middle-box {
     background-color: var(--color-palette-3);
-    height: 60vh;
+    height: 800px;
 }
 
 .bottom-box {
+    height: 700px;
     background-color: var(--color-palette-1);
     padding: 30px;
 }
@@ -156,24 +160,54 @@ img {
 }
 
 .innerbox {
-    width: 60%;
-    margin: 25% 0% 0% 15%;
+    line-height: 30px;
+    font-size: 28px;
+    width: 350px;
+    margin-top: 180px;
+    margin-left: 90px;
 }
 
-.left-innerbox {
-    width: 100%;
-    max-width: 23vw;
-    margin-left: 2vw;
+.infont {
     z-index: 1;
 }
 
-.right-innerbox {
-    width: 100%;
-    max-width: 800px;
-    margin-left: 18vw;
+.behind {
     z-index: 2;
+}
+
+.left-innerbox {
+    width: 500px;
+    height: 600px;
+    margin-left: 130px;
+}
+
+.left-innerbox-bottom {
+    width: 350px;
+    margin-top: 60px;
+    margin-left: 50px;
+    aspect-ratio: 4480 / 6720;
+}
+
+.right-innerbox {
+    margin-left: 500px;
+    width: 1000px;
+    margin-top: 100px;
     aspect-ratio: 16 / 9; /* or 1 / 1 for square */
     overflow: hidden;
+}
+
+.right-innerbox-bottom {
+    font-size: 24.5px;
+    margin-left: 500px;
+    width: 900px;
+    height: 700px;
+    margin-top: 60px;
+    aspect-ratio: 16 / 9; /* or 1 / 1 for square */
+    overflow: hidden;
+}
+
+.border-radius {
+    border-radius: 200px 200px 0 0;
 }
 
 /* nav styles */
@@ -193,7 +227,7 @@ img {
     text-align: center;
     padding: 20px;
     border-radius: 40px 40px 0px 0px;
-    margin: 0 5vw 0 5vw;
+    margin: 0 75px 0 75px;
     text-decoration: none;
     font-size: calc(1.5vw + 10px);
     font-weight: bold;
@@ -234,8 +268,8 @@ img {
     }
 
     .right-innerbox {
-        max-width: 45vw;
-        margin: 5vh 15vw 0vh 40vw;
+        width: 45vw;
+        margin: 100px 150px 0px 400px;
     }
 }
 
