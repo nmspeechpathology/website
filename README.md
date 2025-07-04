@@ -82,3 +82,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats
 # https://docs.astro.build/en/guides/markdown-content/
+# https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image

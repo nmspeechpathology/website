@@ -6,6 +6,7 @@ import Header from '../components/Header.astro';
 import '../styles/global.css';
 import MyLogo from '../assets/logo.svg?raw';
 import MyDarkLogo from '../assets/dark-logo.svg?raw';
+import * as headings from '../texts/headings.md';
 ---
 
 <html lang="en">
@@ -17,12 +18,10 @@ import MyDarkLogo from '../assets/dark-logo.svg?raw';
         <title>{fullTitle}</title>
 	</head>
 	<body>
-		<div class="top-box">
-			<div class="logo-size-lg logo">
-				<Fragment set:html={MyLogo} />
-			</div>
-			<h1>Nicole McFarlane</h1>
-			<h2>SPEECH PATHOLOGY</h2>
+		<div class="header">
+			<div class="logo-size-lg logo"><Fragment set:html={MyLogo} /></div>
+			<h1 class="float-left">{headings.frontmatter.title}</h1>
+			<h2>{headings.frontmatter.profession}</h2>
 		</div>
 		<Header />
         <main>
@@ -34,8 +33,8 @@ import MyDarkLogo from '../assets/dark-logo.svg?raw';
             <div class="logo-size-sm color-match-1 logo">
 				<Fragment set:html={MyDarkLogo} />
 			</div>
-            <h1 class="footer-h1">Nicole McFarlane</h1>
-            <h2 class="footer-h2">SPEECH PATHOLOGY</h2>
+            <h1 class="footer-h1">{headings.frontmatter.title}</h1>
+            <h2 class="footer-h2">{headings.frontmatter.profession}</h2>
         </div>
     </footer>
 </html>

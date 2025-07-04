@@ -7,26 +7,49 @@ const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 ---
 <BaseLayout title="Home">
 
-	<div class="middle-box">
+	<div class="content-section-top">
 		<div class="container">
-			<div class="svg-bg-1 box infront left-innerbox">
-				<p class="paragraph behind innerbox"><b>I provide <br>compassionate, <br>tailored support in speech, language, and <br>swallowing - helping <br>you communicate <br>more clearly and <br>enjoy mealtimes with <br>confidence.</b></p>
+			<div class="infront page1-top-left-content">				
+				<svg id="Layer_1" class="content-bubble" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 679.864 711.746">
+					<path class="behind bubble-color" d="M51.99,357.521c0-156.26,127.687-282.696,284.414-280.663,154.249,2.001,276.96,130.585,276.96,284.847v202.235c0,41.017-33.251,74.267-74.267,74.267h-226.716v-.81c-145.534-10.411-260.391-131.691-260.391-279.877Z" />
+					<text class="infront bubble-text" x="180" y="180">
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_1}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_2}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_3}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_4}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_5}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_6}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_7}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_8}</tspan>
+						<tspan x="180" dy="1.2em">{aboutMe.frontmatter.bubble_line_9}</tspan>
+					</text>
+				</svg>
 			</div>
-			<div class="box behind right-innerbox svg-1 innerbox-overlap">
+			<div class="behind right-innerbox innerbox-overlap">
 				<img src="src/assets/png_assets/Website Elements-06.png#svgView(preserveAspectRatio(none))" />
 			</div>
 			<!-- <Image src={myImage} alt="Corporate Memphis Image Art"/> -->
 			<!-- <img src="myimage.svg#svgView(preserveAspectRatio(none))" /> -->
 		</div>
 	</div>
-	<div class="bottom-box">
-		<div class="box behind left-innerbox-bottom">
-			<img class="border-radius" src="src/assets/portrait_photo.jpg" />
+	<div class="content-section-middle">
+		<svg id="Layer_2" class="infront content-seperator" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="200 265 1450 920">
+			<path class="seperator-color" d="M0,872.324v239.914h1920v-512.111c-85.363-118.134-204.695-220.386-293.323-236.493-219.242-39.845-370.538,84.212-518.354,72.711-147.817-11.502-231.915-133.279-537.7-163.932C313.929,246.681,96.125,407.198,0,549.905v322.419Z"/>
+		</svg>
+		<div class="about-me">
+			<div class="behind about-me-image">
+				<img class="border-radius" src="src/assets/portrait_photo.jpg" />
+			</div>
+			<div class="infont about-me-content">
+				<h2 id="about-me-h2">{aboutMe.frontmatter.title}</h2>
+				<p>{aboutMe.frontmatter.first_paragraph}</p>
+				<p>{aboutMe.frontmatter.second_paragraph}</p>
+			</div>
 		</div>
-		<div class="box infont right-innerbox-bottom">
-			<h2>{aboutMe.frontmatter.title}</h2>
-			<p>{aboutMe.frontmatter.first_paragraph}</p>
-			<p>{aboutMe.frontmatter.second_paragraph}</p>
-		</div>
+	</div>
+	<div class="content-section-bottom">
+		<h1 id="how-to-book-h2">How to book:</h1>
+		<p id="contact-text">{aboutMe.frontmatter.contact_message}</p>
+		<p id="contact-text"><b>Email:</b>{aboutMe.frontmatter.email} and <b>Phone:</b> {aboutMe.frontmatter.phone}</p>
 	</div>
 </BaseLayout>
