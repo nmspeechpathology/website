@@ -5,61 +5,93 @@ import lower_seperator from '../assets/vector_assets/Website Elements-03.svg';
 import seperator from '../assets/vector_assets/Website Elements-04.svg';
 import drinking_svg from '../assets/vector_assets/Website Elements-07.svg';
 import speaking_svg from '../assets/vector_assets/Website Elements-11.svg';
+import beige_logo from '../assets/vector_assets/Website Elements-10.svg';
 import * as service from '../texts/service.md';
-const { first_list, second_list, second_sub_list } = service.frontmatter;
+const { list_1, list_2, list_2_sublist_1, list_3, list_4, list_5, list_6 } = service.frontmatter;
 ---
 <BaseLayout title="Service">
-    <div class="content-section-top">
-        <div class="svg-wrapper">
-            <Image class="infront page-2-content-seperator cropped-svg" src={seperator} alt="Blob Seperator" />
-        </div>
+    <div class="p2-c1 green-bg content-section-top">
         <div class="infront page-2-content-1">
-            <h2 id="bold-h2">{service.frontmatter.service_h2_question}</h2>
+            <h2 id="bold-h2">{service.frontmatter.content_1_title_1}</h2>
             <div class="short-line">
-                <p><Fragment set:html={service.frontmatter.first_paragraph}/></p>
+                <p><Fragment set:html={service.frontmatter.paragraph_1}/></p>
                 <ul>
-                    {first_list.map((item: string) => ( 
-                    <li>{item}</li>
+                    {list_1.map((item: string) => ( 
+                        <li>{item}</li>
                     ))}
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="p2-c2 green-bg content-section-middle">
+        <Image class="behind p2-cs cropped-svg" src={seperator} alt="Blob Seperator" />
         <div class="infront page-2-content-2">
-            <h1 id="extra-large-title">{service.frontmatter.service_h1}</h1>
-            <div class="short-line page-2-text-2">
-                <h2 id="bold-h2" class="top-gap">{service.frontmatter.service_h2_expertise}</h2>
-                <p><Fragment set:html={service.frontmatter.second_paragraph}/></p>
+            <h1 id="extra-large-title">{service.frontmatter.content_2_title_1}</h1>
+            <div class="short-line">
+                <h2 id="bold-h2" class="top-gap">{service.frontmatter.content_2_title_2}</h2>
+                <p><Fragment set:html={service.frontmatter.paragraph_2}/></p>
                 <ul>
-                    {
-                    second_list.map((list: string, index: number) => (
+                    {list_2.map((list: string, index: number) => (
                         <li>
-                            <Fragment set:html={list}/>
-                            {
+                            <Fragment set:html={list}/>{
                             index === 0 ? 
-                            second_sub_list.map((sub_list: string) => (
-                                    <ul>
-                                        <li>{sub_list}</li>
-                                    </ul>
-                            )) : ""
-                            }
+                            list_2_sublist_1.map((sub_list: string) => (
+                                <ul><li>{sub_list}</li></ul>
+                            )) : ""}
                         </li>
-                    ))
-                    }
+                    ))}
                 </ul>
             </div>
         </div>
         <Image class="infront drinking_svg" src={drinking_svg} alt="Drinking Man" />
         <Image class="infront speaking_svg" src={speaking_svg} alt="Speaking Girl" />
 	</div>
-    <div class="content-section-bottom">
+     <div class="p2-c3 green-bg content-section-middle-2">
+        <Image class="infront p2-c3-l1 beige-logo-size" src={beige_logo} alt="Beige Colored Logo" />
         <div class="">
-            <Image class="infront page-2-content-seperator-2" src={lower_seperator} alt="Lower Seperator" />
+            <div class="in-between rounded-box p2-c3-b1 brown-bg">
+                <div class="rounded-box-text">
+                    <h3>{service.frontmatter.content_3_title_1}</h3>
+                    <ul>
+                        {list_3.map((list: string) => (
+                            <li><Fragment set:html={list}/></li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div class="in-between rounded-box p2-c3-b2 brown-bg">
+                <div class="rounded-box-text">
+                    <h3>{service.frontmatter.content_3_title_2}</h3>
+                    <ul>
+                        {list_4.map((list: string) => (
+                            <li><Fragment set:html={list}/></li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="infront page-2-content-3">
-            
-            <h1 id="extra-large-title">Signs of Needing Support</h1>
-            <div class="short-line page-2-text-2">
-                <h2>Signs of Communication Impairment</h2>
+        <Image class="infront p2-c3-l2 beige-logo-size" src={beige_logo} alt="Beige Colored Logo" />
+    </div>
+    <div class="p2-c4 beige-bg content-section-bottom">
+        <Image class="behind p2-cs2" src={lower_seperator} alt="Lower Seperator" />
+        <div class="behind page-2-content-3">
+            <h1 id="extra-large-title">{service.frontmatter.content_4_title_1}</h1>
+            <div class="split-column-text short-line">
+                <h2>{service.frontmatter.content_4_title_2}</h2>
+                <p><Fragment set:html={service.frontmatter.paragraph_3}/></p>
+                <ul>
+                    {list_5.map((list: string) => (
+                        <li><Fragment set:html={list}/></li>
+                    ))}
+                </ul>
+                <p><br><br><br><br></p>
+                <h2><Fragment set:html={service.frontmatter.content_4_title_3}/></h2>
+                <p><Fragment set:html={service.frontmatter.paragraph_4}/></p>
+                <ul>
+                    {list_6.map((list: string) => (
+                        <li><Fragment set:html={list}/></li>
+                    ))}
+                </ul>
             </div>
         </div>
     </div>

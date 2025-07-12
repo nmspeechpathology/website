@@ -6,7 +6,6 @@ const fullTitle = title ? `${title} | ${siteName}` : "NMSP";
 import '../styles/global.css';
 import { Image } from 'astro:assets';
 import Header from '../components/Header.astro';
-import CompanyLogo from '../assets/logo.svg';
 import CompanyDarkLogo from '../assets/dark-logo.svg';
 import CPSPLogo from '../assets/CPSP_logo_vert.png';
 import NDISLogo from '../assets/DSIS_logo.png';
@@ -24,13 +23,6 @@ import * as footer from '../texts/footer.md';
         <title>{fullTitle}</title>
 	</head>
 	<body>
-		<div class="header">
-			<div class="logo-size-lg logo">
-				<Image class="" src={CompanyLogo} alt="NMPathology Logo" />
-			</div>
-			<h1 id="header-title">{headings.frontmatter.title}</h1>
-			<h2 id="header-title">{headings.frontmatter.profession}</h2>
-		</div>
 		<Header />
         <main>
 		    <slot />
@@ -43,17 +35,18 @@ import * as footer from '../texts/footer.md';
 				<p id="contact-text">{footer.frontmatter.contact_message}</p>
 				<p id="contact-text"><b>Email:</b>{footer.frontmatter.email} and <b>Phone:</b> {footer.frontmatter.phone}</p>
 			</div>
-            <div class="footer-logo logo">
+            <div class="footer-logo centralize">
 				<Image class="" src={CompanyDarkLogo} alt="NMPathology Logo Dark Version." />
 			</div>
             <h1 class="footer-h1">{headings.frontmatter.title}</h1>
             <h2 class="footer-h2">{headings.frontmatter.profession}</h2>
-			<div class="logo">
+			<div class="centralize">
 				<Image class="footer-logos logo-CPSP" src={CPSPLogo} alt="CPSP Logo." />
 				<Image class="footer-logos logo-NDIS" src={NDISLogo} alt="NDIS Logo." />
 				<Image class="footer-logos logo-Medicare" src={MediLogo} alt="Medicare Logo." />
 				<Image class="footer-logos logo-Au-Gov" src={AuGovLogo} alt="AUS Government Logo." />
 			</div>
+			
         </div>
     </footer>
 </html>

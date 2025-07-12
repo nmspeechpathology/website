@@ -8,15 +8,15 @@ import * as landingPage from '../texts/landing-page.md';
 const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 ---
 <BaseLayout title="Home">
-	<div class="content-section-top">
+	<div class="p1-c1 green-bg content-section-top">
 		<div class="content-bubble">
 			<Image class="" src={conversationBubble} alt="Conversation Bubble." />
 			<p class="position-text bold-text"><Fragment set:html={landingPage.frontmatter.bubble_text}/></p>
 		</div>
 		<Image class="behind cartoon-art-right" src={conversationCartoon} alt="Corporate Memphis Image Art" alt="Coversation Cartoon." />
 	</div>
-	<div class="content-section-middle">
-		<Image class="infront content-seperator" src={cloudSeperator} alt="Corporate Memphis Image Art" alt="Cloud Svg Seperator." />
+	<div class="p1-c2 beige-bg content-section-middle">
+		<Image class="infront cs" src={cloudSeperator} alt="Corporate Memphis Image Art" alt="Cloud Svg Seperator." />
 		<div class="about-me">
 			<div class="infront about-me-image">
 				<img class="border-radius" src="src/assets/portrait_photo.jpg" />
