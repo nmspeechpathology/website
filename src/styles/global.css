@@ -2,14 +2,14 @@
   --color-palette-0: rgba(140,164,92,0.5);
   --color-palette-1: rgba(251,235,227,1);
   --color-palette-1-half: rgba(229,219,202,0.95);
-  --color-palette-2: rgba(22,45,21,1);
+  --color-palette-2: rgba(18,43,18,1);
   --color-palette-3: rgba(140,164,92,1);
   --color-palette-4: rgba(250,204,126,1);
 }
 
 @font-face {
     font-family: "Texgyrebonum";
-    src: url("/public/fonts/texgyrebonum-bold.otf") format("opentype");
+    src: url("/fonts/texgyrebonum-bold.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: "Montserrat";
-    src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
+    src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("opentype");
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats */
     font-weight: normal;
     font-style: normal;
@@ -211,6 +211,12 @@ img {
     height: auto;
 }
 
+.p2-cs3 {
+    margin: 850px 0px 0px 0px;
+    width: 800px;
+    height: auto;
+}
+
 /* Page 1-3, Content 1-3 */
 
 .page-2-content-1 {
@@ -338,7 +344,7 @@ img {
     margin-top: -80px;
     height: 450px;
     background: var(--color-palette-3);
-    background-image: url("/public/vector_assets/Website Elements-05.svg");
+    background-image: url("../assets/vector_assets/Website Elements-05.svg");
     background-size: 100%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
