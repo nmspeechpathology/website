@@ -3,16 +3,21 @@ import { Image } from 'astro:assets';
 import Navigation from './Navigation.astro';
 import CompanyLogo from '../assets/logo.svg';
 import * as headings from '../texts/header.md';
+import '../styles/global.css';
+import '../styles/output.css';
+
+const { pathologist, profession } = headings.frontmatter
 ---
 <header>
   <nav>
-    <div class="header">
-			<div class="logo-size-lg centralize">
-				<Image class="" src={CompanyLogo} alt="NMPathology Logo" />
-			</div>
-			<h1 id="header-title">{headings.frontmatter.title}</h1>
-			<h2 id="header-title">{headings.frontmatter.profession}</h2>
+	<!-- Branding & Logos -->
+	<div class="flex-1 space-y-4 text-center">
+		<div class="flex justify-center">
+			<Image src={CompanyLogo} alt="NMPathology Logo Dark Version" class="h-[10%] w-[10%]" />
 		</div>
+		<h1 class="responsive-heading-xl">{pathologist}</h1>
+		<h2 class="responsive-heading-l">{profession}</h2>
+	</div>
     <Navigation />
   </nav>
 </header>

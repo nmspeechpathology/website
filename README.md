@@ -80,7 +80,11 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ## Importing personalised fonts and compiling / rendering them cleanly.
 
-# https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats
-# https://docs.astro.build/en/guides/markdown-content/
-# https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image
-# https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+## Learning Resources used.
+    - https://github.com/tailwindlabs/tailwindcss/discussions/16641
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/src#font_formats
+    - https://docs.astro.build/en/guides/markdown-content/
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
+    - https://tailwindcss.com/docs/responsive-design
+    - https://tailwindcss.com/docs/margin

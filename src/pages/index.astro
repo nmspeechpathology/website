@@ -3,29 +3,57 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import conversationBubble from '../assets/vector_assets/Website-Elements-12.svg';
 import conversationCartoon from '../assets/vector_assets/Website-Elements-06.svg';
-import cloudSeperator from '../assets/vector_assets/Website-Elements-05.svg';
+import portraitPhoto from '../assets/portrait_photo.jpg';
 import * as landingPage from '../texts/landing-page.md';
+import '../styles/global.css';
+import '../styles/output.css';
+
+const { bubble_text, title, first_paragraph, second_paragraph } = landingPage.frontmatter;
 const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 ---
 <BaseLayout title="Home">
-	<div class="p1-c1 green-bg content-section-top">
-		<div class="content-bubble">
-			<Image class="" src={conversationBubble} alt="Conversation Bubble." />
-			<p class="position-text bold-text"><Fragment set:html={landingPage.frontmatter.bubble_text}/></p>
-		</div>
-		<Image class="behind cartoon-art-right" src={conversationCartoon} alt="Corporate Memphis Image Art" alt="Coversation Cartoon." />
-	</div>
-	<div class="p1-c2 beige-bg content-section-middle">
-		<Image class="infront cs" src={cloudSeperator} alt="Corporate Memphis Image Art" alt="Cloud Svg Seperator." />
-		<div class="about-me">
-			<div class="infront about-me-image">
-				<img class="border-radius" src="src/assets/portrait_photo.jpg" />
+
+	<!-- Background is page separator -->
+	<div class="green-bg relative z-10 w-full responsive-h flex items-center justify-center px-6 py-12 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-05.svg')] responsive-bg">
+
+        <!-- Wrapper to control overlap layout -->
+        <div class="relative flex -translate-y-1/20 items-center justify-center max-w-7xl w-full">
+            
+            <!-- Left SVG: slightly to the right, behind -->
+            <div class="relative -translate-y-[10%] w-1/2 z-0 -mr-2">
+			    <Image class="w-full h-full" src={conversationBubble} alt="Conversation Bubble." loading="eager" />
+                <p class="absolute responsive-p-xs text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
+                    <Fragment set:html={bubble_text} />
+                </p>
 			</div>
-			<div class="infront about-me-content">
-				<h2 id="#bold-h2">{landingPage.frontmatter.title}</h2>
-				<p>{landingPage.frontmatter.first_paragraph}</p>
-				<p>{landingPage.frontmatter.second_paragraph}</p>
+
+            <!-- Right SVG: slightly overlaps the left, on top -->
+            <div class="relative w-4/7 right-1/10 z-10">
+                <Image class="w-full h-auto" src={conversationCartoon} alt="Conversation Bubble." loading="eager" />
+            </div>
+
+		</div>
+	</div>
+	
+	<!-- About Me Section -->
+	<div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center px-6 pt-8">
+	
+		<!-- Image -->
+		<div class="relative -translate-y-[2%] w-[40%] max-w-xs md:max-w-sm">
+			<Image src={portraitPhoto} alt="Portrait of a speech pathologist" loading="eager" class="rounded-t-[400px] w-full h-auto" />
+		</div>
+
+		<!-- Text -->
+		<div class="px-6 py-3 w-full">
+			<div class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-6xl mx-auto">
+			<h2 class="py-4 responsive-heading-l font-bold mb-6 text-center">{title}</h2>
+			<div class="prose prose-lg responsive-p-xs text-gray-700 leading-relaxed">
+				<p>{first_paragraph}</p>
+				<p>{second_paragraph}</p>
 			</div>
 		</div>
 	</div>
+</div>
+
+	
 </BaseLayout>

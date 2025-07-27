@@ -1,9 +1,36 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
 ---
 <BaseLayout title="Contact">
-    <div class="middle-box">
-		<h2 class="footer-h2">Submit an enquiry</h2>
-        <p>User form perhaps?</p>
-	</div>
+    <div class="green-bg beige-text">
+      <h2 class="responsive-heading-xl text-center py-10 font-semibold">Submit an Enquiry</h2>
+
+      <div class="biege-bg relative z-10 w-full responsive-h flex items-center justify-center px-6 py-12 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-01.svg')] responsive-bg">
+        <!-- Left Box -->
+        <div class="relative w-full md:w-1/2 text-gray-0 p-4 sm:p-6 md:p-8 responsive-p-xs">
+
+            <!-- Top-left logo -->
+            <h3 class="responsive-heading-sm">Firstname</h3>
+            <div class="bg-white w-full h-[3vh] rounded-xl"></div>
+            <h3 class="responsive-heading-sm">Surname</h3>
+            <div class="bg-white w-full h-[3vh] rounded-xl"></div>
+            <h3 class="responsive-heading-sm">Email</h3>
+            <div class="bg-white w-full h-[3vh] rounded-xl"></div>
+            <h3 class="responsive-heading-sm">Phone</h3>
+            <div class="bg-white w-full h-[3vh] rounded-xl"></div>
+        
+        </div>
+
+        <!-- Right Box -->
+        <div class="relative w-full md:w-1/2 text-gray-0 p-4 sm:p-6 md:p-8 responsive-p-xs">
+
+          <!-- Bottom-right logo -->
+          <h3 class="responsive-heading-sm py-2">Enquiry</h3>
+          <div class="bg-white w-full h-[20vh] rounded-xl"></div>
+
+        </div>
+      </div>
+    </div>
 </BaseLayout>

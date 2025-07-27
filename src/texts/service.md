@@ -1,5 +1,5 @@
 ---
-content_1_title_1: What is a Speech Pathologist?
+opening: What is a Speech Pathologist?
 paragraph_1: Speech pathologists help people communicate effectively and manage difficulties with eating and drinking. They are university-educated allied health professionals who work with people of all ages.<br>Speech pathologists assist those who experience&#58
 list_1: 
     - Difficulty understanding and expressing themselves in conversations
@@ -16,8 +16,8 @@ list_2:
     - Aphasia treatment, including Primary <br>Progressive Aphasia
     - Augmentative and Alternative Communication <br>(AAC) therapy, including eye gaze technology for <br>complex communication needs
 
-content_2_title_1: Services Provided
-content_2_title_2: SPEECH PATHOLOGY EXPERTISE
+services: Services Provided
+expertise: SPEECH PATHOLOGY EXPERTISE
 list_2_sublist_1:
     - Parkinson’s disease
     - Progressive Supranuclear Palsy (PSP)
@@ -28,18 +28,18 @@ list_2_sublist_1:
 
 content_3_title_1: SERVICE AREAS
 list_3:
-    - Therapy at home, via telehealth, or <br>within hospital settings
-    - Aged care service provision, including <br>residential aged care facilities
-    - Collaboration with other healthcare <br>professionals for multidisciplinary care
-    - Mobile speech pathology services <br>across Brisbane, including the <br>Western suburbs
+    - Therapy at home, via telehealth, or within hospital settings
+    - Aged care service provision, including residential aged care facilities
+    - Collaboration with other healthcare professionals for multidisciplinary care
+    - Mobile speech pathology services across Brisbane, including the <br>Western suburbs
 
 content_3_title_2: WHO I PROVIDE SERVICES TO
 list_4:
-    - Self-managed and plan-managed <br>participants with the National <br>Disability Insurance Scheme (NDIS)
+    - Self-managed and plan-managed participants with the National Disability Insurance Scheme (NDIS)
     - Medicare clients
-    - Department of Veterans’ Affairs <br>(DVA) clients
+    - Department of Veterans’ Affairs (DVA) clients
     - Private Health Fund members
-    - Clients funded by various Aged <br>Care Providers
+    - Clients funded by various Aged Care Providers
 content_4_title_1: Signs of Needing Support
 content_4_title_2: Signs of Communication Impairment
 paragraph_3: People with a communication <br>impairment may experience&#58
