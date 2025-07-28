@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import drinking_svg from '../assets/vector_assets/Website-Elements-07.svg';
 import speaking_svg from '../assets/vector_assets/Website-Elements-11.svg';
 import beige_logo from '../assets/vector_assets/Website-Elements-10.svg';
+import footer_seperator from '../assets/vector_assets/Website-Elements-04.svg';
 import * as service from '../texts/service.md';
 const { opening, paragraph_1, list_1} = service.frontmatter;
 const { services, expertise, list_2, list_2_sublist_1} = service.frontmatter;
@@ -84,29 +85,34 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
             </div>
 
             <!-- SIGNS OF NEEDING SUPPORT -->
-            <div class="biege-bg relative z-10 w-full responsive-h-top flex items-center justify-center px-6 py-12 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-03.svg')]">
-                <h1 class="responsive-heading-xl">{service.frontmatter.content_4_title_1}</h1>
-            </div>
-            <div class="biege-bg relative z-10 w-full responsive-h flex items-center justify-center px-6 py-12 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-02.svg')] responsive-bg">
+            <div class="biege-bg relative z-10 w-full responsive-h-bottom flex items-center justify-center px-6 py-2 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-03.svg')]">
                 
-                <!-- Left Box -->
-                <div class="relative w-full md:w-1/2 text-gray-0 p-4 sm:p-6 md:p-8 responsive-p-xs">
+                <div class="w-full max-w-screen-xl mt-10 mobile:mt-20 lg:mt-30">
+                    
+                    <h1 class="w-full responsive-heading-xl text-gray-0 text-center md:text-left">{service.frontmatter.content_4_title_1}</h1>
+                    
+                    <div class="flex flex-col md:flex-row gap-y-2 md:gap-x-12 w-full">
 
-                    <!-- Top-left logo -->
-                    <h2 class="responsive-heading-xs font-semibold mb-4">{service.frontmatter.content_4_title_2}</h2>
-                    <p><Fragment set:html={service.frontmatter.paragraph_3}/></p>
-                    <ul> {list_5.map((list: string) => ( <li><Fragment set:html={list}/></li> ))} </ul>
-                
-                </div>
+                        <!-- Left Box -->
+                        <div class="relative w-full md:w-1/2 text-gray-0 p-2 sm:p-6 md:p-8 responsive-p-xs">
 
-                <!-- Right Box -->
-                <div class="relative w-full md:w-1/2 text-gray-0 p-4 sm:p-6 md:p-8 responsive-p-xs">
+                            <!-- Top-left logo -->
+                            <h2 class="responsive-heading-xs font-semibold mb-1">{service.frontmatter.content_4_title_2}</h2>
+                            <p><Fragment set:html={service.frontmatter.paragraph_3}/></p>
+                            <ul> {list_5.map((list: string) => ( <li><Fragment set:html={list}/></li> ))} </ul>
+                        
+                        </div>
 
-                    <!-- Bottom-right logo -->
-                    <h2 class="responsive-heading-xs font-semibold mb-4"><Fragment set:html={service.frontmatter.content_4_title_3}/></h2>
-                    <p><Fragment set:html={service.frontmatter.paragraph_4}/></p>
-                    <ul> {list_6.map((list: string) => ( <li><Fragment set:html={list}/></li> ))} </ul>
+                        <!-- Right Box -->
+                        <div class="relative w-full md:w-1/2 text-gray-0 p-2 sm:p-6 md:p-8 responsive-p-xs">
 
+                            <!-- Bottom-right logo -->
+                            <h2 class="responsive-heading-xs font-semibold mb-1"><Fragment set:html={service.frontmatter.content_4_title_3}/></h2>
+                            <p><Fragment set:html={service.frontmatter.paragraph_4}/></p>
+                            <ul> {list_6.map((list: string) => ( <li><Fragment set:html={list}/></li> ))} </ul>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

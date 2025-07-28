@@ -87,20 +87,23 @@ h2 {
 /* Responsive font sizes */
 
 /* page 1 content 1 is complex  */
-.responsive-h   { @apply h-[200px] mobile:h-[230px] tablet:h-[650px] md:h-[1000px]; }
-.responsive-bg  { @apply bg-[position:0_150px] mobile:bg-[position:0_180px] tablet:bg-[position:0_450px] md:bg-[position:0_700px]; }
+.responsive-h   { @apply h-[200px] mobile:h-[280px] tablet:h-[330px] md:h-[650px] lg:h-[1000px]; }
+.responsive-bg  { @apply bg-[position:0_150px] mobile:bg-[position:0_210px] tablet:bg-[position:0_240px] md:bg-[position:0_420px] lg:bg-[position:0_700px]; }
 
 /* page 2 content 1 */
-.responsive-bg-lg   { @apply bg-[position:0_-20px] mobile:bg-[position:0_-10px] tablet:bg-[position:0_250px] md:bg-[position:0_-150px]; }
-.responsive-mt  { @apply mt-9 mobile:mt-0 tablet:mt-0 md:mt-60; }
+.responsive-bg-lg   { @apply bg-[position:0_-20px] mobile:bg-[position:0_-20px] tablet:bg-[position:0_250px] md:bg-[position:0_-150px]; }
+.responsive-mt  { @apply mt-9 mobile:mt-12 tablet:mt-0 md:mt-60; }
 .responsive-pb  { @apply pb-6 mobile:pb-6 tablet:pb-6 md:pb-140; }
 
 /* page 2 content 3 */
 .responsive-h-top   { @apply h-[350px] mobile:h-[350px] tablet:h-[650px] md:h-[1000px]; }
 .responsive-bg-top  { @apply bg-[position:0_330px] mobile:bg-[position:0_-330px] tablet:bg-[position:0_450px] md:bg-[position:0_700px]; }
 
+/* page 2 content 4 */
+.responsive-h-bottom   { @apply h-[450px] mobile:h-[260px] tablet:h-[330px] md:h-[650px] lg:h-[1200px]; }
+
 /* Headings  */
-.responsive-heading-xl  { @apply text-2xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl; }
+.responsive-heading-xl  { @apply text-[23px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl; }
 .responsive-heading-l   { @apply text-lg sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl; }
 .responsive-heading-sm  { @apply text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl; }
 .responsive-heading-xs  { @apply text-[0.6rem] sm:text-xs md:text-sm lg:text-2xl xl:text-3xl; }
@@ -116,7 +119,7 @@ h2 {
 /* Body  */
 
 /* Text */
-.responsive-p-xs { @apply text-[0.39rem] mobile:text-[0.44rem] sm:text-[0.85rem] md:text-[1.04rem] lg:text-[1.4rem] xl:text-[1.7rem]; }
+.responsive-p-xs { @apply text-[0.35rem] mobile:text-[0.46rem] sm:text-[0.85rem] md:text-[1.04rem] lg:text-[1.4rem] xl:text-[1.7rem]; }
 .responsive-spacer-sm { @apply mt-1 sm:mt-3 lg:mt-5; }
 
 /* Elements */
