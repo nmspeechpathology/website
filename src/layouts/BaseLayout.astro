@@ -34,12 +34,16 @@ const { pathologist, contact_title, contact_message, email, phone, profession } 
 		<div class="w-full mx-auto flex flex-col justify-between">
 
 			<!-- Contact Info -->
-			<div class=" brown-bg py-12 beige-text text-center flex-1">
-				<h1 class="responsive-heading-l font-bold">{contact_title}</h1>
-				<div class="responsive-p-xs">
+			<div class="dark-green-bg py-12 green-text text-center flex-1">
+				<div class="ml-[10%] md:ml-[20%] w-[80%] md:w-[60%] mb-[20px] md:mb-[40px] xl:mb-[60px] beige-bg rounded-[190px] h-[50px] md:h-[80px] xl:h-[120px] ">
+					<a href="/contact" class="green-text texgyre-font rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] transition-colors duration-200 text-center " >
+						<h1 class="py-2 md:py-4 xl:py-6 text-2xl md:text-4xl xl:text-6xl ">{contact_title}</h1>
+					</a>
+				</div>
+				<div class="beige-text text-[0.5rem] md:text-[1rem] xl:text-[1.43rem]">
 					<p>{contact_message}</p>
 					<p>
-						<span class="font-semibold">Email:</span> {email} &emsp; &emsp;
+						<span class=font-semibold>Email:</span> <a href={`mailto::${email}`}>{email}</a> &emsp; &emsp; &emsp;
 						<span class="font-semibold">Phone:</span> {phone}
 					</p>
 				</div>
@@ -48,18 +52,18 @@ const { pathologist, contact_title, contact_message, email, phone, profession } 
 			<!-- Branding & Logos -->
 			<div class="py-4 flex-1 space-y-2 text-center">
 				<div class="flex justify-center">
-					<Image src={CompanyDarkLogo} alt="NMPathology Logo Dark Version" class="h-[10%] w-[10%]" />
+					<Image src={CompanyDarkLogo} alt="NMPathology Logo Dark Version" class="h-[50px] md:h-[150px] xl:h-[250px] w-[50px] md:w-[150px] xl:w-[250px]" />
 				</div>
-				<h1 class="responsive-heading-l font-bold">{pathologist}</h1>
-				<h2 class="responsive-heading-sm">{profession}</h2>
+				<h1 class="text-lg md:text-2xl xl:text-5xl font-bold">{pathologist}</h1>
+				<h2 class="text-sm md:text-lg xl:text-3xl uppercase">{profession}</h2>
 			</div>
 
 			<!-- Logos -->
 			<div class="py-10 grid grid-cols-4 w-[80%] translate-x-[15%] text-center">
-				<div class="h-12 lg:h-24"> <Image src={CPSPLogo} alt="CPSP Logo" class="h-full w-[70%] object-contain" /> </div>
-				<div class="h-12 lg:h-24"> <Image src={NDISLogo} alt="NDIS Logo" class="h-full w-[70%] object-contain" /> </div>
-				<div class="h-12 lg:h-24"> <Image src={MediLogo} alt="Medicare Logo" class="h-full w-[70%] object-contain" /> </div>
-				<div class="h-12 lg:h-24"> <Image src={AuGovLogo} alt="AUS Government Logo" class="h-full w-[70%] object-contain" /> </div>
+				<div class="h-12 xl:h-24"> <Image src={CPSPLogo} alt="CPSP Logo" class="h-full w-[70%] object-contain" /> </div>
+				<div class="h-12 xl:h-24"> <Image src={NDISLogo} alt="NDIS Logo" class="h-full w-[70%] object-contain" /> </div>
+				<div class="h-12 xl:h-24"> <Image src={MediLogo} alt="Medicare Logo" class="h-full w-[70%] object-contain" /> </div>
+				<div class="h-12 xl:h-24"> <Image src={AuGovLogo} alt="AUS Government Logo" class="h-full w-[70%] object-contain" /> </div>
 			</div>
 		</div>
 	</footer>

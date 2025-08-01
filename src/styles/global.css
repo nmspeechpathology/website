@@ -1,19 +1,11 @@
 @import "tailwindcss";
-
-@theme {
-    --breakpoint-mobile: 25rem; /* 400px 16x25 */
-    --breakpoint-tablet: 35rem; /* 770px 16x48 */
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --multipler-value: 1.5;
-  --color-palette-0: rgba(140,164,92,0.5);
   --color-palette-1: rgba(251,235,227,1);
-  --color-palette-1-half: rgba(229,219,202,0.95);
   --color-palette-2: rgba(18,43,18,1);
   --color-palette-3: rgba(140,164,92,1);
   --color-palette-4: rgba(250,204,126,1);
@@ -84,49 +76,6 @@ h2 {
   justify-content: center;
 }
 
-/* Responsive font sizes */
-
-/* page 1 content 1 is complex  */
-.responsive-h   { @apply h-[200px] mobile:h-[280px] tablet:h-[330px] md:h-[650px] lg:h-[1000px]; }
-.responsive-bg  { @apply bg-[position:0_150px] mobile:bg-[position:0_210px] tablet:bg-[position:0_240px] md:bg-[position:0_420px] lg:bg-[position:0_700px]; }
-
-/* page 2 content 1 */
-.responsive-bg-lg   { @apply bg-[position:0_-20px] mobile:bg-[position:0_-20px] tablet:bg-[position:0_250px] md:bg-[position:0_-150px]; }
-.responsive-mt  { @apply mt-9 mobile:mt-12 tablet:mt-0 md:mt-60; }
-.responsive-pb  { @apply pb-6 mobile:pb-6 tablet:pb-6 md:pb-140; }
-
-/* page 2 content 3 */
-.responsive-h-top   { @apply h-[350px] mobile:h-[350px] tablet:h-[650px] md:h-[1000px]; }
-.responsive-bg-top  { @apply bg-[position:0_330px] mobile:bg-[position:0_-330px] tablet:bg-[position:0_450px] md:bg-[position:0_700px]; }
-
-/* page 2 content 4 */
-.responsive-h-bottom   { @apply h-[450px] mobile:h-[260px] tablet:h-[330px] md:h-[650px] lg:h-[1200px]; }
-
-/* Headings  */
-.responsive-heading-xl  { @apply text-[23px] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl; }
-.responsive-heading-l   { @apply text-lg sm:text-2xl md:text-5xl lg:text-6xl xl:text-7xl; }
-.responsive-heading-sm  { @apply text-sm sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl; }
-.responsive-heading-xs  { @apply text-[0.6rem] sm:text-xs md:text-sm lg:text-2xl xl:text-3xl; }
-
-.responsive-nav-text    { @apply text-xs mobile:text-sm md:text-base lg:text-2xl xl:text-5xl; }
-.responsive-nav-radius  { @apply rounded-t-lg sm:rounded-t-[1rem] lg:rounded-t-[2rem]; }
-.responsive-nav-py  { @apply py-2 sm:py-4 lg:py-8; }
-.responsive-nav-px  { @apply px-4 sm:px-8 lg:px-16; }
-.responsive-spacer  { @apply mt-3 sm:mt-12 lg:mt-24; }
-
-.header-logo-size { width: 200px; height: 200px; }
-
-/* Body  */
-
-/* Text */
-.responsive-p-xs { @apply text-[0.35rem] mobile:text-[0.46rem] sm:text-[0.85rem] md:text-[1.04rem] lg:text-[1.4rem] xl:text-[1.7rem]; }
-.responsive-spacer-sm { @apply mt-1 sm:mt-3 lg:mt-5; }
-
-/* Elements */
-.beige-text { color: var(--color-palette-1); }
-.portrait-image { width: 300px; height: auto; }
-
-
 /* Image Stack Page 1 Content 1 */
 
 .image-stack {
@@ -154,45 +103,24 @@ h2 {
     border-radius: 0.5rem;
 }
 
-/* Background Colors */
+/* Colors */
+.beige-text { color: var(--color-palette-1);}
+.green-text { color: var(--color-palette-2); }
+.light-green-text { color: var(--color-palette-3); }
 
-.beige-text { font-color: var(--color-palette-1);}
+.heading-font { font-family: 'Texgyrebonum'; }
+
+.header-logo-size { width: 200px; height: 200px; }
+.portrait-image { width: 300px; height: auto; }
 
 .beige-bg { background-color: var(--color-palette-1); }
-.brown-bg { background-color: var(--color-palette-2); }
+.dark-green-bg { background-color: var(--color-palette-2); }
 .green-bg { background-color: var(--color-palette-3); }
 .yellow-bg { background-color: var(--color-palette-4); }
 
 
 /* nav styles */
-
-.nav-links {
-    padding-top: 20px;
-    display: flex;
-    background-color: var(--color-palette-1);
-}
-
-.nav-links a {
-    flex: 1;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 0px 20px 0px 20px;
-    font-family: 'Texgyrebonum';
-    padding: 20px 0px 14px 0px;
-    border-radius: 20px 20px 0 0;
-    color: var(--color-palette-2);
-}
-
 .active {
-    color: var(--color-palette-1) !important;
-    background-color: var(--color-palette-3) !important;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-    background-color:var(--color-palette-2);
     color: var(--color-palette-1);
+    background-color: var(--color-palette-3) !important;
 }

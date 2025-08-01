@@ -14,46 +14,46 @@ const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 <BaseLayout title="Home">
 
 	<!-- Background is page separator -->
-	<div class="green-bg relative z-10 w-full responsive-h flex items-center justify-center px-6 py-12 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-05.svg')] responsive-bg">
+	<div class="green-bg relative z-10 w-full h-[370px] md:h-[550px] xl:h-[1200px] bg-[position:0_280px] md:bg-[position:0_390px] xl:bg-[position:0_900px] flex items-center justify-center py-5 bg-no-repeat bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-05.svg')] ">
 
         <!-- Wrapper to control overlap layout -->
-        <div class="relative flex -translate-y-1/20 items-center justify-center max-w-7xl w-full">
+        <div class="relative flex -translate-y-[0px] md:-translate-y-[20px] xl:-translate-y-[80px] items-center justify-center w-full">
             
             <!-- Left SVG: slightly to the right, behind -->
-            <div class="relative -translate-y-[10%] w-1/2 z-0 -mr-2">
-			    <Image class="w-full h-full" src={conversationBubble} alt="Conversation Bubble." loading="eager" />
-                <p class="absolute responsive-p-xs text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
+            <div class="relative w-[130px] md:w-[270px] xl:w-[550px] left-[20px] -translate-y-[20px] md:-translate-y-[30px] xl:-translate-y-[90px] z-0 -mr-2">
+			    <Image class="w-full h-full" src={conversationBubble} alt="Conversation Bubble. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" />
+                <p class="absolute text-[0.35rem] md:text-[0.7rem] xl:text-[1.43rem] w-[140px] md:w-[220px] xl:w-[320px] text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
                     <Fragment set:html={bubble_text} />
                 </p>
 			</div>
 
             <!-- Right SVG: slightly overlaps the left, on top -->
-            <div class="relative w-4/7 right-1/10 z-10">
-                <Image class="w-full h-auto" src={conversationCartoon} alt="Conversation Bubble." loading="eager" />
+            <div class="relative w-[250px] md:w-[420px] xl:w-[650px] right-[10px] md:right-[60px] xl:right-[120px] z-10">
+                <Image class="w-full h-auto" src={conversationCartoon} alt="Conversation Bubble. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" />
             </div>
 
 		</div>
 	</div>
 	
 	<!-- About Me Section -->
-	<div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center px-6 pt-8">
+	<div class="relative z-10 w-full mx-auto flex flex-col md:flex-row items-center justify-center px-6 pt-8">
 	
 		<!-- Image -->
-		<div class="relative -translate-y-[2%] w-[40%] max-w-xs md:max-w-sm">
-			<Image src={portraitPhoto} alt="Portrait of a speech pathologist" loading="eager" class="rounded-t-[400px] w-full h-auto" />
+		<div class="relative w-[160px] md:w-[300px] xl:w-[400px] -translate-y-[0px] md:-translate-y-[45px] xl:-translate-y-[70px] ">
+			<Image src={portraitPhoto} alt="Portrait of a speech pathologist. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" class="rounded-t-[400px] w-full h-auto" />
 		</div>
 
 		<!-- Text -->
-		<div class="px-6 py-3 w-full">
-			<div class="max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-6xl mx-auto">
-			<h2 class="py-4 responsive-heading-l font-bold mb-6 text-center">{title}</h2>
-			<div class="prose prose-lg responsive-p-xs text-gray-700 leading-relaxed">
-				<p>{first_paragraph}</p>
-				<p>{second_paragraph}</p>
+		<div class="px-6 py-3 pb-20 w-[340px] md:w-[400px] xl:w-[800px]">
+			<div class="mx-auto">
+				<h2 class="py-2 xl:py-4 xl:py-6 text-lg md:text-4xl xl:text-7xl font-bold text-center">{title}</h2>
+				<div class="prose prose-lg text-[0.4rem] md:text-[1rem] xl:text-[1.2rem] text-gray-700 leading-relaxed">
+					<p class="py-2">{first_paragraph}</p>
+					<p>{second_paragraph}</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 	
 </BaseLayout>
