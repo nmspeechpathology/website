@@ -22,7 +22,7 @@ const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
             <!-- Left SVG: slightly to the right, behind -->
             <div class="relative w-[205px] md:w-[350px] xl:w-[650px] left-[20px] -translate-y-[35px] md:-translate-y-[40px] xl:-translate-y-[130px] z-0 -ml-[45px] md:-ml-[200px] xl:-ml-[440px]">
 			    <Image class="w-full h-full" src={conversationBubble} alt="Conversation Bubble. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" />
-                <p class="absolute global-paragraph-text w-[160px] md:w-[250px] xl:w-[400px] text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
+                <p class="absolute global-paragraph-text w-[180px] md:w-[250px] xl:w-[400px] text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
                     <Fragment set:html={bubble_text} />
                 </p>
 			</div>

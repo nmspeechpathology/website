@@ -36,27 +36,36 @@ const { pathologist, make_enquiry, contact_message, email, phone, profession } =
 
 			<!-- Contact Info -->
 			<div class="dark-green-bg py-12 green-text text-left flex-1">
-				{ 
-				currentPath === '/contact' ?
-					"" : 
-					<div class="ml-[10%] md:ml-[20%] xl:ml-[30%] w-[80%] md:w-[60%] xl:w-[40%] mb-[20px] md:mb-[40px] xl:mb-[60px] beige-bg rounded-[190px] h-[50px] md:h-[80px] xl:h-[120px] ">
-						<a href="/contact" class="green-text texgyre-font rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] transition-colors duration-200 text-center " >
-							<h1 class="relative py-2 md:py-4 xl:py-6 text-2xl md:text-4xl xl:text-6xl ">{make_enquiry}</h1>
-						</a> 
-					</div>
-				}
-				<div class="beige-text text-[0.5rem] md:text-[1rem] xl:text-[1.43rem]">
-					<p class="pl-[30%]">{contact_message}</p>
-					<p>
-						<div class="pl-[30%] flex flex-row">
-							<div class="relative w-[45%] justify-center items-stretch">
-								<span class="font-semibold">Email:</span> <a href={`mailto::${email}`}>{email}</a>
+
+				<div id="EnquiryPageId" class="ml-[10%] md:ml-[20%] xl:ml-[30%] w-[80%] md:w-[60%] xl:w-[40%] mb-[20px] md:mb-[40px] xl:mb-[60px] beige-bg rounded-[190px] h-[50px] md:h-[80px] xl:h-[120px]">
+					<a href="/contact" class="green-text texgyre-font rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] transition-colors duration-200 text-center " >
+						<h1 class="relative py-2 md:py-4 xl:py-6 text-2xl md:text-4xl xl:text-6xl ">{make_enquiry}</h1>
+					</a> 
+				</div>
+				<script>
+					// Hiding 'Make Enquiry' on services page.
+					const currentPath = window.location.pathname.replace(/\/+$/, '');
+					if (currentPath === "/contact") {
+						document.getElementById('EnquiryPageId')!.className = "hidden";
+					}
+				</script>
+
+				<!-- Contact footer details -->
+				<div class="flex justify-center beige-text w-full text-[0.5rem] md:text-[1rem] xl:text-[1.43rem]">
+
+					<div class="w-[300px] md:w-[700px] xl:w-[1000px]">
+						<p class="pl-[10%]">{contact_message}</p>
+						<div class="pl-[10%] flex flex-col md:flex-row text-left items-stretch ">
+							<div class="relative w-[100%] md:w-[55%] xl:w-[60%] ">
+								<span class="font-semibold">Email:</span> 
+								<a href={`mailto::${email}`}>{email}</a>
 							</div>
-							<div class="mr-[21%] relative w-[45%] justify-center items-stretch">
-								<span class="font-semibold">Phone:</span> {phone}
+							<div class="relative w-[100%] md:w-[50%] xl:w-[60%] pr-[12%] md:text-right md:pr-[20%] xl:pr-[20%] ">
+								<span class="font-semibold">Phone:</span> 
+								<a>{phone}</a>
 							</div>
 						</div>
-					</p>
+					</div>
 				</div>
 			</div>
 
