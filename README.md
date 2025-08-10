@@ -88,3 +88,5 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     - https://developer.mozilla.org/en-US/docs/Web/CSS/white-space
     - https://tailwindcss.com/docs/responsive-design
     - https://tailwindcss.com/docs/margin
+    - https://docs.astro.build/en/guides/client-side-scripts/#script-processing
+    

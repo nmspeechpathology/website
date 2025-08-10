@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'static',
+  output: 'static', // not static
 
   // or '/repo-name/' if using GitHub Pages directly
   base: '/',

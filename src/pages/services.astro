@@ -17,10 +17,12 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
             <div class="green-bg">
 
                 <!-- Opening question -->
-                <div class="w-full p-6 md:p-20 xl:p-20 text-[0.4rem] md:text-[1rem] xl:text-[1.43rem]">
-                    <h2 class="uppercase font-bold text-[0.8rem] md:text-3xl xl:text-2xl text-left">{opening}</h2>
-                    <p class="mt-2 md:mt-3 xl:mt-10 text-left"><Fragment set:html={paragraph_1}/></p>
-                    <ul class="text-left">{list_1.map((item: string) => ( <li>• {item}</li> ))} </ul>
+                <div class="relative flex flex-col items-center justify-center">
+                    <div class="w-[380px] md:w-[580px] xl:w-[1280px] p-4 md:p-20 xl:p-20">
+                        <h2 class="uppercase font-bold global-sub-header-text">{opening}</h2>
+                        <p class="text-left mt-2 md:mt-3 xl:mt-10 global-paragraph-text"><Fragment set:html={paragraph_1}/></p>
+                        <ul class="text-left mt-[5px] global-list-text">{list_1.map((item: string) => ( <li>• {item}</li> ))} </ul>
+                    </div>
                 </div>
             </div>
            
@@ -28,21 +30,21 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
             <div class="green-bg relative z-10 w-full pb-[calc(50vw-150px)] md:pb-[50px] pd:mb-[0px] bg-[position:0_-20px] md:bg-[position:0_-60px] xl:bg-[position:0_-150px] flex items-center justify-center px-1 py-1 bg-no-repeat bg-[length:105%_auto] md:bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-04.svg')] ">
                 
                 <!-- Content wrapper: full height, flex column -->
-                <div class="w-full flex flex-col space-y-1">
+                <div class="w-full flex flex-col space-y-1 xl:pb-10">
                 
                     <!-- Services Provided -->
                     <div class="relative flex flex-row items-center justify-center w-full px-2 md:px-6 xl:px-12 mt-[calc(30vw-75px)] md:mt-[calc(20vw-70px)] xl:mt-[calc(20vw-80px)] text-left text-[0.33rem] md:text-[0.37rem] xl:text-[1.43rem]">
-                        <h1 class="w-full text-[23px] md:text-5xl xl:text-6xl md:text-4xl xl:text-8xl text-center"> {services} </h1>
+                        <h1 class="w-full global-header-text text-center"> {services} </h1>
                     </div>
 
                     <!-- Service Information -->
                     <div class="relative flex items-center justify-center w-full">
 
                         <!-- Left Text-->
-                        <div class="text-[0.4rem] md:text-[1rem] xl:text-[1.43rem] w-[250px] md:w-[550px] xl:w-[850px] h-[230px] md:h-[700px] xl:h-[1000px] z-0 -mr-2">
-                            <h3 class="w-full text-[0.6rem] md:text-2xl xl:text-5xl font-semibold mt-[1px] md:mt-[40px] xl:mt-[100px] mb-[2px] md:mb-[10px] xl:mb-[25px]" class="">{expertise}</h3>
-                            <p class=""><Fragment set:html={service.frontmatter.paragraph_2}/></p>
-                            <ul> {list_2.map((list: string, index: number) => ( <li>• <Fragment set:html={list}/>{ index === 0 ? list_2_sublist_1.map((sub_list: string) => (<ul><li class="px-2">• {sub_list}</li></ul>)) : ""} </li> ))} </ul>
+                        <div class=" w-[250px] md:w-[550px] xl:w-[850px] h-[230px] md:h-[700px] xl:h-[1000px] z-0 -mr-2">
+                            <h3 class="w-full global-sub-header-text font-semibold mt-[1px] md:mt-[40px] xl:mt-[60px] mb-[2px] md:mb-[10px] xl:mb-[25px]" class="">{expertise}</h3>
+                            <p class="global-paragraph-text"><Fragment set:html={service.frontmatter.paragraph_2}/></p>
+                            <ul class="global-list-text"> {list_2.map((list: string, index: number) => ( <li>• <Fragment set:html={list}/>{ index === 0 ? list_2_sublist_1.map((sub_list: string) => (<ul><li class="px-2">• {sub_list}</li></ul>)) : ""} </li> ))} </ul>
                         </div>
 
                         <!-- Right SVG -->
@@ -63,50 +65,50 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
                 <div class="flex flex-col md:flex-row justify-center items-stretch w-full gap-y-1 md:gap-x-2 px-4 md:px-6 xl:px-16 py-12">
 
                     <!-- Left Box -->
-                    <div class="relative w-full md:w-[45%] dark-green-bg rounded-2xl text-gray-100 p-4 md:p-6 xl:p-8">
+                    <div class="relative w-full md:w-[45%] dark-green-bg rounded-2xl text-white p-4 md:p-6 xl:p-8">
 
                         <!-- Top-left logo -->
                         <Image src={beige_logo} alt="Beige Colored Logo" class="absolute top-0 left-0 w-12 md:w-24 -translate-y-2/3 -translate-x-[45%]" />
-                        <h3 class="text-[0.6rem] md:text-2xl xl:text-5xl font-semibold mb-4"> {service.frontmatter.content_3_title_1} </h3>
-                        <ul class="text-[0.4rem] md:text-[0.95rem] xl:text-[1.43rem] space-y-[0.2rem]"> {list_3.map((list: string) => ( <li>• <Fragment set:html={list} /></li> ))} </ul>
+                        <h3 class="global-minor-header-text font-semibold mb-4 uppercase"> {service.frontmatter.content_3_title_1} </h3>
+                        <ul class="global-list-text space-y-[0.2rem]"> {list_3.map((list: string) => ( <li>• <Fragment set:html={list} /></li> ))} </ul>
                     
                     </div>
 
                     <!-- Right Box -->
-                    <div class="relative w-full md:w-[45%] dark-green-bg rounded-2xl text-gray-100 p-4 md:p-6 xl:p-8">
+                    <div class="relative w-full md:w-[45%] dark-green-bg rounded-2xl text-white p-4 md:p-6 xl:p-8">
 
                         <!-- Bottom-right logo -->
                         <Image src={beige_logo} alt="Beige Colored Logo" class="absolute bottom-0 right-0 w-12 md:w-24 translate-y-1/3 translate-x-1/3" />
-                        <h3 class="text-[0.6rem] md:text-2xl xl:text-5xl font-semibold mb-4"> {service.frontmatter.content_3_title_2} </h3>
-                        <ul class="text-[0.4rem] md:text-[0.95rem] xl:text-[1.43rem] space-y-[0.2rem]"> {list_4.map((list: string) => ( <li>• <Fragment set:html={list} /></li> ))} </ul>
+                        <h3 class="global-minor-header-text font-semibold mb-4 uppercase"> {service.frontmatter.content_3_title_2} </h3>
+                        <ul class="global-list-text space-y-[0.2rem]"> {list_4.map((list: string) => ( <li>• <Fragment set:html={list} /></li> ))} </ul>
 
                     </div>
                 </div>
             </div>
 
             <!-- SIGNS OF NEEDING SUPPORT -->
-            <div class="biege-bg relative z-10 w-full h-[450px] md:h-[650px] xl:h-[1200px] flex items-center justify-center px-6 py-2 bg-no-repeat bg-[position:100%_0] bg-[length:50%_auto] bg-[url('../assets/vector_assets/Website-Elements-03.svg')]">
+            <div class="biege-bg relative z-10 w-full h-[450px] md:h-[650px] xl:h-[800px] flex items-center justify-center px-6 py-2 bg-no-repeat bg-[position:100%_0] bg-[length:50%_auto] bg-[url('../assets/vector_assets/Website-Elements-03.svg')]">
                 <div class="w-full max-w-screen-[90px] mt-1 md:mt-20 xl:mt-30">
-                    <h1 class="w-full text-[23px] md:text-5xl xl:text-6xl text-gray-0 text-center md:text-left">{service.frontmatter.content_4_title_1}</h1>
+                    <h1 class="global-header-text text-center md:text-left xl:py-8">{service.frontmatter.content_4_title_1}</h1>
                     <div class="flex flex-col md:flex-row gap-y-2 md:gap-x-12 w-full">
 
                         <!-- Left Box -->
-                        <div class="relative w-full md:w-1/2 text-gray-0 p-2 md:p-4 xl:pt-6 text-[0.4rem] md:text-[0.95rem] xl:text-[1.43rem] mt-3 ">
+                        <div class="relative w-full md:w-1/2 p-2 md:p-4 xl:pt-6 mt-3 ">
 
                             <!-- Top-left logo -->
-                            <h2 class="text-[0.6rem] md:text-2xl xl:text-5xl font-semibold uppercase mb-1">{service.frontmatter.content_4_title_2}</h2>
-                            <p class="mt-2"><Fragment set:html={service.frontmatter.paragraph_3}/></p>
-                            <ul class="leading-[11px] md:leading-[24px] xl:leading-[34px]"> {list_5.map((list: string) => ( <li>• <Fragment set:html={list}/></li> ))} </ul>
+                            <h2 class="global-minor-header-text font-semibold uppercase mb-1">{service.frontmatter.content_4_title_2}</h2>
+                            <p class="global-paragraph-text mt-2"><Fragment set:html={service.frontmatter.paragraph_3}/></p>
+                            <ul class="global-list-text"> {list_5.map((list: string) => ( <li>• <Fragment set:html={list}/></li> ))} </ul>
                         
                         </div>
 
                         <!-- Right Box -->
-                        <div class="relative w-full md:w-1/2 text-gray-0 p-2 md:p-6 xl:p-8 text-[0.4rem] md:text-[0.95rem] xl:text-[1.43rem] ">
+                        <div class="relative w-full md:w-1/2 p-2 md:p-6 xl:p-8 ">
 
                             <!-- Bottom-right logo -->
-                            <h2 class="text-[0.6rem] md:text-2xl xl:text-5xl font-semibold uppercase mb-1"><Fragment set:html={service.frontmatter.content_4_title_3}/></h2>
-                            <p class="mt-2"><Fragment set:html={service.frontmatter.paragraph_4}/></p>
-                            <ul class="leading-[11px] md:leading-[24px] xl:leading-[34px]"> {list_6.map((list: string) => ( <li>• <Fragment set:html={list}/></li> ))} </ul>
+                            <h2 class="global-minor-header-text font-semibold uppercase mb-1"><Fragment set:html={service.frontmatter.content_4_title_3}/></h2>
+                            <p class="global-paragraph-text mt-2"><Fragment set:html={service.frontmatter.paragraph_4}/></p>
+                            <ul class="global-list-text"> {list_6.map((list: string) => ( <li>• <Fragment set:html={list}/></li> ))} </ul>
 
                         </div>
                     </div>

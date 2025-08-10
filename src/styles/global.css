@@ -64,63 +64,31 @@ h2 {
     margin: 0px;
 }
 
-.header {
-    background-color: var(--color-palette-1);
-    padding: 50px 30px 0px 30px;
-    margin-bottom: -36px;
-}
 
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* Global font sizes */
 
-/* Image Stack Page 1 Content 1 */
+/* Headers */
+.global-header-text { @apply text-[23px] md:text-4xl xl:text-8xl; }
+.global-sub-header-text { @apply text-[0.8rem] md:text-3xl xl:text-5xl; }
+.global-minor-header-text { @apply text-[0.6rem] md:text-2xl xl:text-4xl; }
 
-.image-stack {
-    position: relative;
-    margin: auto; /* Center the section horizontally */
-    width: 500px; /* Set a fixed or max width equal to your images */
-    height: 300px; /* Optional: match image height if you want spacing */
-}
+/* Paragraphs */
+.global-paragraph-text { @apply text-left text-[0.6rem] md:text-[1rem] xl:text-[1.8rem] leading-[13px] md:leading-[20px] xl:leading-[35px]; }
+.global-list-text { @apply text-left text-[0.5rem] md:text-[1rem] xl:text-[1.6rem] leading-[13px] md:leading-[20px] xl:leading-[30px]; }
+.global-input-text { @apply text-sm md:text-2xl lg:text-3xl; }
 
-.svg-cropper {
-    margin-top: -250px;
-    height: 220px;
-    overflow: hidden;
-}
+.heading-font { font-family: 'Texgyrebonum'; }
 
-.svg-cropper img {
-    width: 100%;
-    object-fit: cover;  /* Only works with set width/height on <img> */
-}
 
-.image-layer :global(img) {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.5rem;
-}
+/* Global colors */
 
-/* Colors */
+/* Fonts */
 .beige-text { color: var(--color-palette-1);}
 .green-text { color: var(--color-palette-2); }
 .light-green-text { color: var(--color-palette-3); }
 
-.heading-font { font-family: 'Texgyrebonum'; }
-
-.header-logo-size { width: 200px; height: 200px; }
-.portrait-image { width: 300px; height: auto; }
-
+/* Backgrounds */
 .beige-bg { background-color: var(--color-palette-1); }
 .dark-green-bg { background-color: var(--color-palette-2); }
 .green-bg { background-color: var(--color-palette-3); }
 .yellow-bg { background-color: var(--color-palette-4); }
-
-
-/* nav styles */
-.active {
-    color: var(--color-palette-1);
-    background-color: var(--color-palette-3) !important;
-}
