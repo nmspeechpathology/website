@@ -250,17 +250,44 @@
   .z-0 {
     z-index: 0;
   }
+  .z-1 {
+    z-index: 1;
+  }
+  .z-5 {
+    z-index: 5;
+  }
   .z-10 {
     z-index: 10;
   }
   .z-15 {
     z-index: 15;
   }
+  .z-20 {
+    z-index: 20;
+  }
   .mx-auto {
     margin-inline: auto;
   }
+  .-my-\[5\%\] {
+    margin-block: calc(5% * -1);
+  }
   .-my-\[5px\] {
     margin-block: calc(5px * -1);
+  }
+  .-my-\[10px\] {
+    margin-block: calc(10px * -1);
+  }
+  .-my-\[15px\] {
+    margin-block: calc(15px * -1);
+  }
+  .-my-\[20\%\] {
+    margin-block: calc(20% * -1);
+  }
+  .-my-\[20px\] {
+    margin-block: calc(20px * -1);
+  }
+  .-my-\[50px\] {
+    margin-block: calc(50px * -1);
   }
   .my-\[15px\] {
     margin-block: 15px;
@@ -268,8 +295,20 @@
   .-mt-\[5px\] {
     margin-top: calc(5px * -1);
   }
+  .-mt-\[20\%\] {
+    margin-top: calc(20% * -1);
+  }
+  .-mt-\[20px\] {
+    margin-top: calc(20px * -1);
+  }
+  .-mt-\[50\%\] {
+    margin-top: calc(50% * -1);
+  }
   .-mt-\[50px\] {
     margin-top: calc(50px * -1);
+  }
+  .-mt-\[100\%\] {
+    margin-top: calc(100% * -1);
   }
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
@@ -285,6 +324,9 @@
   }
   .mt-\[5px\] {
     margin-top: 5px;
+  }
+  .mt-\[20px\] {
+    margin-top: 20px;
   }
   .mt-\[50px\] {
     margin-top: 50px;
@@ -349,6 +391,9 @@
   .ml-auto {
     margin-left: auto;
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -382,8 +427,17 @@
   .h-\[30px\] {
     height: 30px;
   }
+  .h-\[40px\] {
+    height: 40px;
+  }
   .h-\[50px\] {
     height: 50px;
+  }
+  .h-\[70px\] {
+    height: 70px;
+  }
+  .h-\[100\%\] {
+    height: 100%;
   }
   .h-\[100px\] {
     height: 100px;
@@ -489,6 +543,9 @@
   }
   .w-\[180px\] {
     width: 180px;
+  }
+  .w-\[200px\] {
+    width: 200px;
   }
   .w-\[205px\] {
     width: 205px;
@@ -761,6 +818,12 @@
   .bg-\[length\:350px_auto\] {
     background-size: 350px auto;
   }
+  .bg-\[length\:360px_auto\] {
+    background-size: 360px auto;
+  }
+  .bg-\[length\:900px_auto\] {
+    background-size: 900px auto;
+  }
   .bg-\[position\:-20vw_-20px\] {
     background-position: -20vw -20px;
   }
@@ -833,6 +896,9 @@
   .py-\[0px\] {
     padding-block: 0px;
   }
+  .py-\[5\%\] {
+    padding-block: 5%;
+  }
   .py-\[5px\] {
     padding-block: 5px;
   }
@@ -844,6 +910,12 @@
   }
   .py-\[6vw\] {
     padding-block: 6vw;
+  }
+  .py-\[10px\] {
+    padding-block: 10px;
+  }
+  .py-\[20\%\] {
+    padding-block: 20%;
   }
   .py-\[20px\] {
     padding-block: 20px;
@@ -857,6 +929,9 @@
   .py-\[60px\] {
     padding-block: 60px;
   }
+  .py-\[100px\] {
+    padding-block: 100px;
+  }
   .py-\[105\%\] {
     padding-block: 105%;
   }
@@ -868,6 +943,15 @@
   }
   .pt-\[5vw\] {
     padding-top: 5vw;
+  }
+  .pt-\[20\%\] {
+    padding-top: 20%;
+  }
+  .pt-\[20px\] {
+    padding-top: 20px;
+  }
+  .pt-\[50\%\] {
+    padding-top: 50%;
   }
   .pt-\[50px\] {
     padding-top: 50px;
@@ -893,6 +977,9 @@
   .pb-\[25px\] {
     padding-bottom: 25px;
   }
+  .pb-\[30px\] {
+    padding-bottom: 30px;
+  }
   .pb-\[35px\] {
     padding-bottom: 35px;
   }
@@ -904,6 +991,9 @@
   }
   .pb-\[100px\] {
     padding-bottom: 100px;
+  }
+  .pb-\[130px\] {
+    padding-bottom: 130px;
   }
   .pb-\[300px\] {
     padding-bottom: 300px;
