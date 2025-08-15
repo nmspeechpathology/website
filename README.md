@@ -89,4 +89,5 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
     - https://tailwindcss.com/docs/responsive-design
     - https://tailwindcss.com/docs/margin
     - https://docs.astro.build/en/guides/client-side-scripts/#script-processing
+    - https://stackoverflow.com/questions/11201248/background-image-tiles-have-gap-between-them-when-using-svg-image-how-to-solve
     

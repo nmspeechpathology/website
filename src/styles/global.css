@@ -3,12 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --multipler-value: 1.5;
-  --color-palette-1: rgba(251,235,227,1);
-  --color-palette-2: rgba(18,43,18,1);
-  --color-palette-3: rgba(140,164,92,1);
-  --color-palette-4: rgba(250,204,126,1);
+@theme {
+    --breakpoint-mobile: 420px; /* 400px 16x25 */
 }
 
 @font-face {
@@ -42,12 +38,11 @@ body {
     overflow-x: hidden; /* hides horizontal scroll */
     line-height: 1.5;
     position: absolute;
-    color: var(--color-palette-2);
 }
 
 footer {
-    background-color: var(--color-palette-4);
-    color: var(--color-palette-2);
+    background-color: rgba(250,204,126,1);
+    color: rgba(18,43,18,1);
 }
 
 * {
@@ -67,13 +62,12 @@ h2 {
 /* Global font sizes */
 
 /* Headers */
-.global-header-text { @apply text-[23px] md:text-4xl xl:text-8xl; }
+.global-header-text { @apply text-[23px] md:text-6xl xl:text-8xl; }
 .global-sub-header-text { @apply text-[0.8rem] md:text-3xl xl:text-5xl; }
 .global-minor-header-text { @apply text-[0.6rem] md:text-2xl xl:text-4xl; }
 
 /* Paragraphs */
 .global-paragraph-text { @apply text-left text-[0.6rem] md:text-[1rem] xl:text-[1.8rem] leading-[13px] md:leading-[20px] xl:leading-[35px]; }
-.global-list-text { @apply text-left text-[0.5rem] md:text-[1rem] xl:text-[1.6rem] leading-[13px] md:leading-[20px] xl:leading-[30px]; }
 .global-input-text { @apply text-sm md:text-2xl lg:text-3xl; }
 
 .heading-font { font-family: 'Texgyrebonum'; }
@@ -82,12 +76,12 @@ h2 {
 /* Global colors */
 
 /* Fonts */
-.beige-text { color: var(--color-palette-1);}
-.green-text { color: var(--color-palette-2); }
-.light-green-text { color: var(--color-palette-3); }
+.beige-text { color: rgba(251,235,227,1); }
+.green-text { color: rgba(18,43,18,1); }
+.light-green-text { color: rgba(140,164,92,1); }
 
 /* Backgrounds */
-.beige-bg { background-color: var(--color-palette-1); }
-.dark-green-bg { background-color: var(--color-palette-2); }
-.green-bg { background-color: var(--color-palette-3); }
-.yellow-bg { background-color: var(--color-palette-4); }
+.beige-bg { background-color: rgba(251,235,227,1); }
+.dark-green-bg { background-color: rgba(18,43,18,1); }
+.green-bg { background-color: rgba(140,164,92,1); }
+.yellow-bg { background-color: rgba(250,204,126,1); }
