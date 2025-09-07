@@ -34,15 +34,22 @@ const tab_css = "px-4 md:px-8 xl:px-16 py-2 md:py-4 xl:py-8 rounded-t-lg md:roun
 
     Array.from(document.querySelectorAll<HTMLAnchorElement>('#tabs a')).some(link => {
       const tab_css = "px-4 md:px-8 xl:px-16 py-2 md:py-4 xl:py-8 rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] hover:bg-[rgba(18,43,18,1)] hover:text-[rgba(251,235,227,1)]";
-      const active_tab_css = "px-4 md:px-8 xl:px-16 py-2 md:py-4 xl:py-8 rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] hover:bg-[rgba(18,43,18,1)] hover:text-[rgba(251,235,227,1)] bg-[rgba(140,164,92,1)] ";
+      const active_tab_css = "px-4 md:px-8 xl:px-16 py-2 md:py-4 xl:py-8 rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] hover:bg-[rgba(18,43,18,1)] hover:text-[rgba(251,235,227,1)] bg-[rgba(140,164,92,1)]";
+      const dark_active_tab_css = "px-4 md:px-8 xl:px-16 py-2 md:py-4 xl:py-8 rounded-t-lg md:rounded-t-[1rem] xl:rounded-t-[2rem] hover:bg-[rgba(140,164,92,1)] hover:text-black bg-[rgba(18,43,18,1)] text-[rgba(251,235,227,1)]";
       const linkPath = link.href;
       const lastPath = link.pathname.split('/').filter(Boolean).pop();
-      
       
       if (currentPath === "/" + lastPath) {
         //document.getElementById('myLink2')!.textContent = linkPath!;
         //document.getElementById('myLink3')!.textContent = lastPath!;
-        link.className = link.className.replace(tab_css, active_tab_css);
+
+        if (lastPath == "services") {
+          link.className = link.className.replace(tab_css, dark_active_tab_css);
+        }
+
+        else {
+          link.className = link.className.replace(tab_css, active_tab_css);
+        }
       }
       
       if (currentPath === "") {

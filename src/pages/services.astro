@@ -11,54 +11,57 @@ const { services, expertise, list_2, list_2_sublist_1} = service.frontmatter;
 const { list_3, list_4, list_5, list_6 } = service.frontmatter;
 ---
 <BaseLayout title="Service">
-    <div class="">
+    <div class="biege-bg">
         <div class="">
 
-            <div class="relative green-bg z-15 bg-[length:105%_105%">
+            <div class="relative dark-green-bg z-15 bg-[length:105%_105%]">
 
                 <!-- Opening question -->
-                <div class="relative z-15 -mb-[5px] flex flex-col items-center justify-center">
-                    <div class="w-[380px] md:w-[580px] xl:w-[1280px] p-4 md:p-20 xl:p-20">
+                <div class="relative text-white z-15 -mb-[5px] flex flex-col items-center justify-center">
+                    <div class="w-full p-4 md:p-20 xl:p-20">
                         <h2 class="uppercase font-bold global-sub-header-text">{opening}</h2>
                         <p class="text-left mt-2 md:mt-3 xl:mt-10 global-paragraph-text"><Fragment set:html={paragraph_1}/></p>
                         <ul class="text-left mt-[5px] global-paragraph-text">{list_1.map((item: string) => ( <li>• {item}</li> ))} </ul>
                     </div>
                 </div>
             </div>
+            <div class="relative dark-green-bg z-4 h-[280px] md:h-[550px] xl:h-[720px]"></div>
            
             <!-- WHAT IS SPEECH PATHOLOGY -->
-            <div class="green-bg relative z-04 w-full pb-[100px] mobile:pb-[calc(70vw-150px)] md:pb-[150px] pd:mb-[0px] bg-[position:-20vw_-20px] md:bg-[position:-15vw_-60px] xl:bg-[position:0_-150px] flex items-center justify-center px-1 py-1 bg-no-repeat bg-[length:120%_auto] md:bg-[length:115%_auto] xl:bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-04.svg')] ">
-                
-                <!-- Content wrapper: full height, flex column -->
-                <div class="z-15 w-full flex flex-col space-y-1 xl:pb-10">
-                
-                    <!-- Services Provided -->
-                    <div class="relative flex flex-row items-center justify-center w-full px-2 md:px-6 xl:px-12 mt-[calc(20vw-25px)] md:mt-[calc(20vw-70px)] xl:mt-[calc(20vw-80px)] text-left md:text-[0.37rem] xl:text-[1.43rem]">
-                        <h1 class="w-full global-header-text text-center"> {services} </h1>
-                    </div>
-
-                    <!-- Service Information -->
-                    <div class="relative flex items-center justify-center w-full">
-
-                        <!-- Left Text-->
-                        <div class=" w-[250px] md:w-[520px] xl:w-[850px] h-[230px] md:h-[700px] xl:h-[1000px] z-0 -mr-2">
-                            <h3 class="w-full global-sub-header-text font-semibold mt-[1px] md:mt-[40px] xl:mt-[60px] mb-[2px] md:mb-[10px] xl:mb-[25px]" class="">{expertise}</h3>
-                            <p class="global-paragraph-text"><Fragment set:html={service.frontmatter.paragraph_2}/></p>
-                            <ul class="global-paragraph-text"> {list_2.map((list: string, index: number) => ( <li>• <Fragment set:html={list}/>{ index === 0 ? list_2_sublist_1.map((sub_list: string) => (<ul><li class="px-2">• {sub_list}</li></ul>)) : ""} </li> ))} </ul>
+            <div class="green-bg z-1">
+                <div class="relative w-full z-15 mt-[-280px] md:mt-[-550px] xl:mt-[-720px] pb-[100px] mobile:pb-[calc(70vw-150px)] md:pb-[150px] pd:mb-[0px] bg-[position:-20vw_-20px] md:bg-[position:-15vw_-60px] xl:bg-[position:0_-150px] flex items-center justify-center px-1 py-1 bg-no-repeat bg-[length:120%_auto] md:bg-[length:115%_auto] xl:bg-[length:100%_auto] bg-[url('../assets/vector_assets/Website-Elements-04.svg')] ">
+                    
+                    <!-- Content wrapper: full height, flex column -->
+                    <div class="z-15 w-full flex flex-col space-y-1 xl:pb-10">
+                    
+                        <!-- Services Provided -->
+                        <div class="relative flex flex-row items-center justify-center w-full px-2 md:px-6 xl:px-12 mt-[calc(20vw-25px)] md:mt-[calc(20vw-70px)] xl:mt-[calc(20vw-80px)] text-left md:text-[0.37rem] xl:text-[1.43rem]">
+                            <h1 class="w-full global-header-text text-center"> {services} </h1>
                         </div>
 
-                        <!-- Right SVG -->
-                        <div class="w-[100px] md:w-[220px] xl:w-[550px] z-10">
-                            <Image class="" src={drinking_svg} alt="Drinking Man. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" />
-                            <Image class="" src={speaking_svg} alt="Speaking Women. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" />
-                        </div>
-                        
-                    </div>
+                        <!-- Service Information -->
+                        <div class="relative flex items-center justify-center w-full">
 
+                            <!-- Left Text-->
+                            <div class=" w-[250px] md:w-[520px] xl:w-[850px] h-[230px] md:h-[700px] xl:h-[1000px] z-0 -mr-2">
+                                <h3 class="w-full global-sub-header-text font-semibold mt-[1px] md:mt-[40px] xl:mt-[60px] mb-[2px] md:mb-[10px] xl:mb-[25px]" class="">{expertise}</h3>
+                                <p class="global-paragraph-text"><Fragment set:html={service.frontmatter.paragraph_2}/></p>
+                                <ul class="global-paragraph-text"> {list_2.map((list: string, index: number) => ( <li>• <Fragment set:html={list}/>{ index === 0 ? list_2_sublist_1.map((sub_list: string) => (<ul><li class="px-2">• {sub_list}</li></ul>)) : ""} </li> ))} </ul>
+                            </div>
+
+                            <!-- Right SVG -->
+                            <div class="w-[100px] md:w-[220px] xl:w-[550px] z-10">
+                                <Image class="translate-y-[70px] md:translate-y-0" src={drinking_svg} alt="Drinking Man. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" />
+                                <Image class="translate-y-[70px] md:translate-y-0" src={speaking_svg} alt="Speaking Women. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" />
+                            </div>
+                            
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div class="beige-bg relative z-10 h-[150px] w-100vw -translate-y-[180px] -mb-[150px] mobile:hidden"></div>
-            <div class="green-bg relative z-05 h-[300px] w-full -translate-y-[140px] -mb-[200px] mobile:hidden bg-[position:-20vw_calc(20vw-300px)] flex items-center justify-center px-1 py-1 bg-no-repeat bg-[length:120%_auto] bg-[url('../assets/vector_assets/Website-Elements-04.svg')] " />
+            <div class="green-bg text-white relative z-05 h-[300px] w-full -translate-y-[140px] -mb-[200px] mobile:hidden bg-[position:-20vw_calc(20vw-300px)] flex items-center justify-center px-1 py-1 bg-no-repeat bg-[length:120%_auto] bg-[url('../assets/vector_assets/Website-Elements-04.svg')] " />
             
             <!-- Pretty boxes -->
             <div class="green-bg py-[50px] z-15 -mt-[5px] ">
@@ -89,7 +92,7 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
             </div>
 
             <!-- SIGNS OF NEEDING SUPPORT -->
-            <div class="biege-bg relative z-10 w-full h-[450px] md:h-[650px] xl:h-[800px] flex items-center justify-center px-6 py-2 -mt-[5px] -mr-[5px] bg-no-repeat bg-[position:100%_0] bg-[length:50%_auto] bg-[url('../assets/vector_assets/Website-Elements-03.svg')]">
+            <div class="biege-bg relative z-10 w-full h-[450px] md:h-[650px] xl:h-[800px] flex items-center justify-center px-6 py-2 -mt-[5px] -mr-[5px] bg-no-repeat bg-[position:100%_1%] bg-[length:50%_auto] bg-[url('../assets/vector_assets/Website-Elements-03.svg')]">
                 <div class="w-full max-w-screen-[90px] mt-1 md:mt-20 xl:mt-30">
                     <h1 class="global-header-text text-center md:text-left xl:py-8">{service.frontmatter.content_4_title_1}</h1>
                     <div class="flex flex-col md:flex-row gap-y-2 md:gap-x-12 w-full">
