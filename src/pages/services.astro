@@ -72,8 +72,8 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
 
                         <!-- Top-left logo -->
                         <Image src={beige_logo} alt="Beige Colored Logo" class="absolute top-0 left-0 w-12 md:w-24 -translate-y-2/3 -translate-x-[45%]" />
-                        <h3 class="global-sub-header-text font-semibold mb-4 uppercase"> {service.frontmatter.content_3_title_1} </h3>
-                        <ul class="global-paragraph-text space-y-[0.2rem] pl-[30px]"> {list_3.map((list: string) => ( <li class="py-[2px] list-disc"><Fragment set:html={list} /></li> ))} </ul>
+                        <h3 class="global-sub-header-text font-semibold mb-2 uppercase"> {service.frontmatter.content_3_title_1} </h3>
+                        <ul class="global-paragraph-text space-y-[0.2rem] pl-[30px]"> {list_3.map((list: string) => ( <li class="pb-[1px] mb:pb-[4px] list-disc"><Fragment set:html={list} /></li> ))} </ul>
                     
                     </div>
 
@@ -82,8 +82,8 @@ const { list_3, list_4, list_5, list_6 } = service.frontmatter;
 
                         <!-- Bottom-right logo -->
                         <Image src={beige_logo} alt="Beige Colored Logo" class="absolute bottom-0 right-0 w-12 md:w-24 translate-y-1/3 translate-x-1/3" />
-                        <h3 class="global-sub-header-text font-semibold mb-4 uppercase"> {service.frontmatter.content_3_title_2} </h3>
-                        <ul class="global-paragraph-text space-y-[0.2rem] pl-[30px]"> {list_4.map((list: string) => ( <li class="py-[2px] list-disc"><Fragment set:html={list} /></li> ))} </ul>
+                        <h3 class="global-sub-header-text font-semibold mb-2 uppercase"> {service.frontmatter.content_3_title_2} </h3>
+                        <ul class="global-paragraph-text space-y-[0.2rem] pl-[30px]"> {list_4.map((list: string) => ( <li class="pb-[1px] mb:pb-[4px] list-disc"><Fragment set:html={list} /></li> ))} </ul>
 
                     </div>
                 </div>
