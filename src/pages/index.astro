@@ -20,15 +20,15 @@ const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
         <div class="relative flex -translate-y-[0px] md:-translate-y-[20px] xl:-translate-y-[80px] items-center justify-center w-full">
             
             <!-- Left SVG: slightly to the right, behind -->
-            <div class="relative w-[205px] md:w-[350px] xl:w-[650px] left-[20px] -translate-y-[35px] md:-translate-y-[40px] xl:-translate-y-[130px] z-0 -ml-[45px] md:-ml-[200px] xl:-ml-[440px]">
-			    <Image class="w-full h-full" src={conversationBubble} alt="Conversation Bubble. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" />
-                <p class="absolute global-paragraph-text w-[180px] md:w-[250px] xl:w-[400px] text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
+            <div class="relative w-[240px] md:w-[350px] xl:w-[650px] left-[20px] -translate-y-[35px] md:-translate-y-[40px] xl:-translate-y-[130px] z-0 -ml-[45px] md:-ml-[200px] xl:-ml-[440px]">
+			    <Image class="w-full h-auto" src={conversationBubble} alt="Conversation Bubble. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" />
+                <p class="absolute global-paragraph-text w-[200px] md:w-[280px] xl:w-[400px] text-black-700 text-center font-semibold text-left top-[52%] left-[34%] -translate-x-1/6 -translate-y-1/2 px-4 pointer-events-none">
                     <Fragment set:html={bubble_text} />
                 </p>
 			</div>
 
             <!-- Right SVG: slightly overlaps the left, on top -->
-            <div class="relative w-[250px] md:w-[520px] xl:w-[950px] z-10 -mr-[35px] md:-mr-[200px] xl:-mr-[440px] -ml-[28px] md:-ml-[70px] xl:-ml-[180px]">
+            <div class="relative w-[280px] md:w-[520px] xl:w-[950px] z-10 -mr-[35px] md:-mr-[200px] xl:-mr-[440px] -ml-[28px] md:-ml-[70px] xl:-ml-[180px]">
                 <Image class="w-full h-auto" src={conversationCartoon} alt="Conversation Bubble. Speechie, Speech, Therapist, SLT, Aphasia, Voice, Parkinsons Disease, Speak Out, articulation, remote" loading="eager" />
             </div>
 
@@ -36,7 +36,7 @@ const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 	</div>
 	
 	<!-- About Me Section -->
-	<div class="beige-bg relative z-10 w-full mx-auto flex flex-col md:flex-row items-center justify-center px-6 pt-8">
+	<div class="beige-bg relative z-10 w-full mx-auto flex flex-col md:flex-row items-center justify-center px-6 pt-1 md:pt-8">
 	
 		<!-- Image -->
 		<div class="relative w-[160px] md:w-[300px] xl:w-[400px] -translate-y-[0px] md:-translate-y-[45px] xl:-translate-y-[70px] ">
@@ -44,7 +44,7 @@ const texts = Object.values(import.meta.glob('../texts/*.md', { eager: true }));
 		</div>
 
 		<!-- Text -->
-		<div class="px-6 py-3 pb-20 w-[340px] md:w-[400px] xl:w-[900px]">
+		<div class="px-1 md:px-6 py-3 pb-20 w-full max-w-[400px] md:max-w-full md:w-[400px] xl:w-[900px]">
 			<div class="mx-auto">
 				<h2 class="py-2 xl:py-4 xl:py-6 text-lg md:text-4xl xl:text-7xl font-bold text-center">{title}</h2>
 				<div class="prose prose-lg global-paragraph-text leading-relaxed">

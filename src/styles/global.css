@@ -2,9 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @theme {
-    --breakpoint-mobile: 420px; /* 400px 16x25 */
+    --breakpoint-mobile: 460px; /* 400px 16x25 */
+    --breakpoint-tablet: 550px;
 }
 
 @font-face {
@@ -23,6 +23,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 html {
     background-color: white;
     font-family: 'Texgyrebonum';
@@ -67,7 +68,7 @@ h2 {
 .global-minor-header-text { @apply text-[0.6rem] md:text-2xl xl:text-4xl; }
 
 /* Paragraphs */
-.global-paragraph-text { @apply text-left text-[0.6rem] md:text-[1rem] xl:text-[1.8rem] leading-[13px] md:leading-[20px] xl:leading-[35px]; }
+.global-paragraph-text { @apply text-left text-[0.8rem] md:text-[1rem] xl:text-[1.8rem] leading-[15.5px] md:leading-[20px] xl:leading-[40px]; }
 .global-input-text { @apply text-sm md:text-2xl lg:text-3xl; }
 
 .heading-font { font-family: 'Texgyrebonum'; }
